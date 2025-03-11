@@ -5,8 +5,13 @@ Large Language Models (LLMs) have recently gained attention for automating softw
 This research aims to enhance LLM-based analysis to improve CI/CD pipeline reliability by diagnosing failures more efficiently. This will be achieved through log preprocessing, prompt optimization, and analysis of the differences between unfiltered and preprocessed logs, followed by an evaluation of the results.
 
 
-![Data-PreProcessing drawio](https://github.com/user-attachments/assets/70e20ac9-9516-436d-b61c-2772097324ab)
+![Data-Preparation drawio](https://github.com/user-attachments/assets/f99b1e36-d12e-4857-9fb4-1695d05c1dd8)
+
+![Data-PreProcessing-Page-2 drawio](https://github.com/user-attachments/assets/b30e3a8d-0180-402b-9475-cba9a950fd2a)
 
 ![prompt-opt-Page-3 drawio](https://github.com/user-attachments/assets/ab71ee5b-b2bc-4e73-9109-988b87d4c4a1)
+
+![Data-PreProcessing-Page-4 drawio (1)](https://github.com/user-attachments/assets/b41f8931-a968-4a72-9b95-af2a7deb60c1)
+
 
 
