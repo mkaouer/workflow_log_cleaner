@@ -9,7 +9,7 @@ This research aims to enhance LLM-based analysis to improve CI/CD pipeline relia
 
 ![Data-PreProcessing-Page-2 drawio](https://github.com/user-attachments/assets/b30e3a8d-0180-402b-9475-cba9a950fd2a)
 
-![prompt-opt-Page-3 drawio](https://github.com/user-attachments/assets/ab71ee5b-b2bc-4e73-9109-988b87d4c4a1)
+![prompt-opt drawio](https://github.com/user-attachments/assets/5a83beaa-6b29-4809-a2d9-8f4ddd7b8103)
 
 ![Data-PreProcessing-Page-4 drawio (1)](https://github.com/user-attachments/assets/b41f8931-a968-4a72-9b95-af2a7deb60c1)
 
