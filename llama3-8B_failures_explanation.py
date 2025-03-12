@@ -12,8 +12,7 @@ Expected Input File Format:
 - The script will analyze each log and generate a summary of the root cause.
 - The output file will have an additional column 'llama_8b' containing the AI-generated diagnosis.
 """
-INPUT_DATASET_PATH = 'C:/Users/meriemm/Desktop/github_actions_failures/llama_input.xlsx'
-OUTPUT_DATASET_PATH = 'C:/Users/meriemm/Desktop/github_actions_failures/RESULTS-llama_8b_2.xlsx'
+
 
 
 def diagnose_ci_cd_failure(error_log):
