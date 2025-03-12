@@ -25,7 +25,7 @@ This repository contains scripts for diagnosing CI/CD pipeline failures using AI
   ```bash
   pip install pandas openpyxl
 
-- Ensure Ollama is installed and accessible in your system path.
+- Ensure **Ollama** is installed and accessible in your system path.
   
 #### Execution Steps
 - Run the script from the terminal:
