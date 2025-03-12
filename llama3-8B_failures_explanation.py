@@ -96,10 +96,15 @@ def process_excel(input_excel_path, output_excel_path):
 
 
 def main():
-    process_excel(INPUT_DATASET_PATH, OUTPUT_DATASET_PATH)
+    input_path = input("Enter the path to the input Excel file: ")
+    output_path = input("Enter the path to save the output Excel file: ")
+    process_excel(input_path, output_path)
 
 
 if __name__ == "__main__":
     print("Starting script...")
     main()
     print("Script execution completed.")
+
+
+
