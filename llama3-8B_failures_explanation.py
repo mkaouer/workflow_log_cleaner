@@ -5,6 +5,13 @@ import subprocess
 import os
 
 # Input and output file paths
+"""
+Expected Input File Format:
+- The input file should be an Excel (.xlsx) file.
+- It must contain a column named 'Error log' where each row contains a CI/CD pipeline failure log.
+- The script will analyze each log and generate a summary of the root cause.
+- The output file will have an additional column 'llama_8b' containing the AI-generated diagnosis.
+"""
 INPUT_DATASET_PATH = 'C:/Users/meriemm/Desktop/github_actions_failures/llama_input.xlsx'
 OUTPUT_DATASET_PATH = 'C:/Users/meriemm/Desktop/github_actions_failures/RESULTS-llama_8b_2.xlsx'
 
