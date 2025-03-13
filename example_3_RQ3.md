@@ -160,7 +160,7 @@ Failure Log:
 
 ERROR: Could not find a version that satisfies the requirement numpy==1.25.0 (from versions: 1.18.0, 1.19.5, 1.20.0, 1.21.0)
 ERROR: No matching distribution found for numpy==1.25.0
-3️⃣ Chain-of-Thought (CoT) Prompting
+Chain-of-Thought (CoT) Prompting
 Prompt:
 "Let's analyze this step by step. First, identify why this error occurs. Second, consider potential causes like Python version compatibility, outdated pip, or system constraints. Finally, suggest solutions in a structured way."
 
