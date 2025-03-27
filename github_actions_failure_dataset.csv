@@ -1,0 +1,361 @@
+log,category,explanation,fix
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"> eslint-plugin-eslint-plugin@6.0.0 test
+> nyc --all --check-coverage --include lib mocha tests --recursive
+
+ Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.
+ Instead change require to dynamic import() or update project to ESM modules.
+##[error]Process completed with exit code 1.",Script/Step Failures,"CommonJS require() used on an ES module, which is not supported.",Use dynamic import() or migrate the project to ES module format.
+"Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+  1) """"before all"""" hook: beforeAll in """"{root}""""
+INFO[0000] Deleting cluster 'cht-e2e'                   
+##[error]Process completed with exit code 1.",Docker/Build Failures,Docker build failed due to a non-existent image tag in DockerHub.,Ensure the image and tag exist or build and push the required version before using it.
+"Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+  1) """"before all"""" hook: beforeAll in """"{root}""""
+INFO[0000] Deleting cluster 'cht-e2e'                   
+##[error]Process completed with exit code 1.",Docker/Build Failures,Docker build failed due to a non-existent image tag in DockerHub.,Ensure the image and tag exist or build and push the required version before using it.
+"Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+  1) """"before all"""" hook: beforeAll in """"{root}""""
+INFO[0000] Deleting cluster 'cht-e2e'                   
+##[error]Process completed with exit code 1.",Docker/Build Failures,Docker build failed due to a non-existent image tag in DockerHub.,Ensure the image and tag exist or build and push the required version before using it.
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found
+0 passing (35s)
+1 failing
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded
+##[error]Process completed with exit code 1.",API/Network Errors,"API endpoint returned a 404, likely because the route isn't available or service isn't running.",Verify the API route is deployed correctly and the test environment is fully initialized.
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found
+0 passing (35s)
+1 failing
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded
+##[error]Process completed with exit code 1.",API/Network Errors,"API endpoint returned a 404, likely because the route isn't available or service isn't running.",Verify the API route is deployed correctly and the test environment is fully initialized.
+"Running command audit...
+ⓘ Checking if the config file is fine... OK
+⨉ 1) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+⨉ 2) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+⨉ We found 6 errors related with the project integrity.
+##[error]Process completed with exit code 1.",HTML/Content Validation Errors,Audit failed due to broken external links in documentation or exercise files.,Replace or remove outdated or broken URLs in the content.
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+  1) """"before all"""" hook: beforeAll in """"{root}""""
+INFO[0000] Deleting cluster 'cht-e2e'                   
+##[error]Process completed with exit code 1.",Docker/Build Failures,Docker build failed due to a non-existent image tag in DockerHub.,Ensure the image and tag exist or build and push the required version before using it.
+"Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+  1) """"before all"""" hook: beforeAll in """"{root}""""
+INFO[0000] Deleting cluster 'cht-e2e'                   
+##[error]Process completed with exit code 1.",Docker/Build Failures,Docker build failed due to a non-existent image tag in DockerHub.,Ensure the image and tag exist or build and push the required version before using it.
+"Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found
+0 passing (35s)
+1 failing
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded
+##[error]Process completed with exit code 1.",API/Network Errors,"API endpoint returned a 404, likely because the route isn't available or service isn't running.",Verify the API route is deployed correctly and the test environment is fully initialized.
+"Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found
+0 passing (35s)
+1 failing
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded
+##[error]Process completed with exit code 1.",API/Network Errors,"API endpoint returned a 404, likely because the route isn't available or service isn't running.",Verify the API route is deployed correctly and the test environment is fully initialized.
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found
+0 passing (35s)
+1 failing
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded
+##[error]Process completed with exit code 1.",API/Network Errors,"API endpoint returned a 404, likely because the route isn't available or service isn't running.",Verify the API route is deployed correctly and the test environment is fully initialized.
+"Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+  1) """"before all"""" hook: beforeAll in """"{root}""""
+INFO[0000] Deleting cluster 'cht-e2e'                   
+##[error]Process completed with exit code 1.",Docker/Build Failures,Docker build failed due to a non-existent image tag in DockerHub.,Ensure the image and tag exist or build and push the required version before using it.
+"Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found
+0 passing (35s)
+1 failing
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded
+##[error]Process completed with exit code 1.",API/Network Errors,"API endpoint returned a 404, likely because the route isn't available or service isn't running.",Verify the API route is deployed correctly and the test environment is fully initialized.
+"Running command audit...
+ⓘ Checking if the config file is fine... OK
+⨉ 1) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+⨉ 2) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+⨉ We found 6 errors related with the project integrity.
+##[error]Process completed with exit code 1.",HTML/Content Validation Errors,Audit failed due to broken external links in documentation or exercise files.,Replace or remove outdated or broken URLs in the content.
+"Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+  1) """"before all"""" hook: beforeAll in """"{root}""""
+INFO[0000] Deleting cluster 'cht-e2e'                   
+##[error]Process completed with exit code 1.",Docker/Build Failures,Docker build failed due to a non-existent image tag in DockerHub.,Ensure the image and tag exist or build and push the required version before using it.
+"Running command audit...
+ⓘ Checking if the config file is fine... OK
+⨉ 1) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+⨉ 2) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+⨉ We found 6 errors related with the project integrity.
+##[error]Process completed with exit code 1.",HTML/Content Validation Errors,Audit failed due to broken external links in documentation or exercise files.,Replace or remove outdated or broken URLs in the content.
+"Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found
+0 passing (35s)
+1 failing
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded
+##[error]Process completed with exit code 1.",API/Network Errors,"API endpoint returned a 404, likely because the route isn't available or service isn't running.",Verify the API route is deployed correctly and the test environment is fully initialized.
+"> eslint-plugin-eslint-plugin@6.0.0 test
+> nyc --all --check-coverage --include lib mocha tests --recursive
+
+ Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.
+ Instead change require to dynamic import() or update project to ESM modules.
+##[error]Process completed with exit code 1.",Script/Step Failures,"CommonJS require() used on an ES module, which is not supported.",Use dynamic import() or migrate the project to ES module format.
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+  1) """"before all"""" hook: beforeAll in """"{root}""""
+INFO[0000] Deleting cluster 'cht-e2e'                   
+##[error]Process completed with exit code 1.",Docker/Build Failures,Docker build failed due to a non-existent image tag in DockerHub.,Ensure the image and tag exist or build and push the required version before using it.
+"Running command audit...
+ⓘ Checking if the config file is fine... OK
+⨉ 1) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+⨉ 2) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+⨉ We found 6 errors related with the project integrity.
+##[error]Process completed with exit code 1.",HTML/Content Validation Errors,Audit failed due to broken external links in documentation or exercise files.,Replace or remove outdated or broken URLs in the content.
+"> eslint-plugin-eslint-plugin@6.0.0 test
+> nyc --all --check-coverage --include lib mocha tests --recursive
+
+ Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.
+ Instead change require to dynamic import() or update project to ESM modules.
+##[error]Process completed with exit code 1.",Script/Step Failures,"CommonJS require() used on an ES module, which is not supported.",Use dynamic import() or migrate the project to ES module format.
+"> eslint-plugin-eslint-plugin@6.0.0 test
+> nyc --all --check-coverage --include lib mocha tests --recursive
+
+ Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.
+ Instead change require to dynamic import() or update project to ESM modules.
+##[error]Process completed with exit code 1.",Script/Step Failures,"CommonJS require() used on an ES module, which is not supported.",Use dynamic import() or migrate the project to ES module format.
+"Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+  1) """"before all"""" hook: beforeAll in """"{root}""""
+INFO[0000] Deleting cluster 'cht-e2e'                   
+##[error]Process completed with exit code 1.",Docker/Build Failures,Docker build failed due to a non-existent image tag in DockerHub.,Ensure the image and tag exist or build and push the required version before using it.
+"Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+  1) """"before all"""" hook: beforeAll in """"{root}""""
+INFO[0000] Deleting cluster 'cht-e2e'                   
+##[error]Process completed with exit code 1.",Docker/Build Failures,Docker build failed due to a non-existent image tag in DockerHub.,Ensure the image and tag exist or build and push the required version before using it.
+"> eslint-plugin-eslint-plugin@6.0.0 test
+> nyc --all --check-coverage --include lib mocha tests --recursive
+
+ Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.
+ Instead change require to dynamic import() or update project to ESM modules.
+##[error]Process completed with exit code 1.",Script/Step Failures,"CommonJS require() used on an ES module, which is not supported.",Use dynamic import() or migrate the project to ES module format.
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"Running command audit...
+ⓘ Checking if the config file is fine... OK
+⨉ 1) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+⨉ 2) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+⨉ We found 6 errors related with the project integrity.
+##[error]Process completed with exit code 1.",HTML/Content Validation Errors,Audit failed due to broken external links in documentation or exercise files.,Replace or remove outdated or broken URLs in the content.
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"> eslint-plugin-eslint-plugin@6.0.0 test
+> nyc --all --check-coverage --include lib mocha tests --recursive
+
+ Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.
+ Instead change require to dynamic import() or update project to ESM modules.
+##[error]Process completed with exit code 1.",Script/Step Failures,"CommonJS require() used on an ES module, which is not supported.",Use dynamic import() or migrate the project to ES module format.
+"> eslint-plugin-eslint-plugin@6.0.0 test
+> nyc --all --check-coverage --include lib mocha tests --recursive
+
+ Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.
+ Instead change require to dynamic import() or update project to ESM modules.
+##[error]Process completed with exit code 1.",Script/Step Failures,"CommonJS require() used on an ES module, which is not supported.",Use dynamic import() or migrate the project to ES module format.
+"Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found
+0 passing (35s)
+1 failing
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded
+##[error]Process completed with exit code 1.",API/Network Errors,"API endpoint returned a 404, likely because the route isn't available or service isn't running.",Verify the API route is deployed correctly and the test environment is fully initialized.
+"> eslint-plugin-eslint-plugin@6.0.0 test
+> nyc --all --check-coverage --include lib mocha tests --recursive
+
+ Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.
+ Instead change require to dynamic import() or update project to ESM modules.
+##[error]Process completed with exit code 1.",Script/Step Failures,"CommonJS require() used on an ES module, which is not supported.",Use dynamic import() or migrate the project to ES module format.
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"Running command audit...
+ⓘ Checking if the config file is fine... OK
+⨉ 1) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+⨉ 2) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+⨉ We found 6 errors related with the project integrity.
+##[error]Process completed with exit code 1.",HTML/Content Validation Errors,Audit failed due to broken external links in documentation or exercise files.,Replace or remove outdated or broken URLs in the content.
+"Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found
+0 passing (35s)
+1 failing
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded
+##[error]Process completed with exit code 1.",API/Network Errors,"API endpoint returned a 404, likely because the route isn't available or service isn't running.",Verify the API route is deployed correctly and the test environment is fully initialized.
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"Running command audit...
+ⓘ Checking if the config file is fine... OK
+⨉ 1) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+⨉ 2) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+⨉ We found 6 errors related with the project integrity.
+##[error]Process completed with exit code 1.",HTML/Content Validation Errors,Audit failed due to broken external links in documentation or exercise files.,Replace or remove outdated or broken URLs in the content.
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found
+0 passing (35s)
+1 failing
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded
+##[error]Process completed with exit code 1.",API/Network Errors,"API endpoint returned a 404, likely because the route isn't available or service isn't running.",Verify the API route is deployed correctly and the test environment is fully initialized.
