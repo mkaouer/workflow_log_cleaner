@@ -64,3 +64,13 @@
 | Clarity               | 4.4           |
 | Formatting            | 4.4           |
 
+
+| Metric               | Mean Difference | Interpretation                                                                 |
+|----------------------|-----------------|-------------------------------------------------------------------------------|
+| **Correctness**       | 0.28            | Llama70b outperforms GPT-4 by 0.28 points.                                    |
+| **Relevance**         | 0.30            | Llama70b performs slightly better in Relevance by 0.30 points.                 |
+| **Depth of Analysis** | 0.51            | Llama70b has a stronger performance by 0.51 points in Depth of Analysis.       |
+| **Clarity**           | 0.60            | Llama70b outperforms GPT-4 by 0.60 points in Clarity (largest difference).    |
+| **Formatting**        | 0.49            | Llama70b scores 0.49 points higher than GPT-4 in Formatting.                   |
+
+
