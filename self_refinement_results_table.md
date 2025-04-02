@@ -56,4 +56,11 @@
 
 ## Self-Refinement Results for GPT-4 
 
+| Metric                | Average Score |
+|-----------------------|---------------|
+| Correctness           | 4.5           |
+| Relevance             | 4.7           |
+| Depth of Analysis     | 3.6           |
+| Clarity               | 4.4           |
+| Formatting            | 4.4           |
 
