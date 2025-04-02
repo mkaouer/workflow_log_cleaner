@@ -74,3 +74,27 @@
 | **Formatting**        | 0.49            | Llama70b scores 0.49 points higher than GPT-4 in Formatting.                   |
 
 
+## Reasoning
+
+# Llama70b vs GPT-4 Comparison
+
+## Llama70b Advantages
+- **Correctness, Relevance, Depth, Clarity, Formatting**: Llama70b outperforms GPT-4 in all metrics, particularly in **Clarity (0.60)**. It shows stronger, more detailed, and well-organized answers.
+
+## GPT-4's Performance
+- GPT-4 may prioritize **flexibility** over **precision and clarity**, which can lead to less structured or clear responses.
+- A possible **broader training focus** could have reduced its sharpness in specific metrics like **Depth** and **Clarity**.
+
+## Why Prefer Llama70b
+- If **clarity**, **in-depth analysis**, and **well-structured responses** are critical, Llama70b is the better option due to its consistent edge in these areas.
+
+## Cost Comparison
+- Since **Llama 3-70B** is open-sourced, you have many options to run it. You can run it **locally** (only paying for hardware and electricity), or use a **hosted version** from various providers. 
+- Regardless of your choice, using Llama70b will cost **much less** than GPT-4.
+  
+### GPT-4 Pricing:
+- **$30 per million input tokens**
+- **$60 per million output tokens**
+
+For more detailed comparison, visit: [Llama70b vs GPT-4 Comparison Analysis](https://www.vellum.ai/blog/llama-3-70b-vs-gpt-4-comparison-analysis)
+
