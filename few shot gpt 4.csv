@@ -1,0 +1,1406 @@
+error,explanation,Fix,,,sources to add to references,preprocessed error,one shot,three shot,five shot
+Error: .github#L1 a step cannot have both the `uses` and `run` keys,"This error comes from a malformed workflow step in your GitHub Actions YAML file — specifically at line 1 (as indicated by #L1). In a single step, you can either:
+
+Use a predefined GitHub Action with the uses key
+OR
+
+Execute a custom shell command with the run key
+
+You cannot combine both in one step.","Split this into two separate steps:
+
+Fixed version:
+
+yaml
+
+- name: Set up Node.js
+  uses: actions/setup-node@v3
+
+- name: Install dependencies
+  run: npm install",,,https://github.com/orgs/community/discussions/137799,Error: .github#L1 a step cannot have both the uses and run keys,"Failure Log: Error: .github#L1 a step cannot have both the `uses` and `run` keys
+Root Cause: This error comes from a malformed workflow step in your GitHub Actions YAML file — specifically at line 1 (as indicated by #L1). In a single step, you can either:
+
+Use a predefined GitHub Action with the uses key  
+OR  
+Execute a custom shell command with the run key  
+
+You cannot combine both in one step.
+
+Suggested Fix: Split this into two separate steps:
+
+- name: Set up Node.js  
+  uses: actions/setup-node@v3
+
+- name: Install dependencies  
+  run: npm install","Failure Log: Error: .github#L1 a step cannot have both the `uses` and `run` keys
+Root Cause: This error comes from a malformed workflow step in your GitHub Actions YAML file — specifically at line 1 (as indicated by #L1). In a single step, you can either:
+
+Use a predefined GitHub Action with the uses key  
+OR  
+Execute a custom shell command with the run key  
+
+You cannot combine both in one step.
+
+Suggested Fix:  
+Split this into two separate steps:
+
+```yaml
+- name: Set up Node.js
+  uses: actions/setup-node@v3
+
+- name: Install dependencies
+  run: npm install","Failure Log:
+Error: .github#L1 a step cannot have both the `uses` and `run` keys
+
+Root Cause: This error comes from a malformed workflow step in your GitHub Actions YAML file — specifically at line 1. In a single step, you can either:
+- Use a predefined GitHub Action with the `uses` key  
+- OR execute a custom shell command with the `run` key  
+You cannot combine both in one step.
+
+Suggested Fix:  
+Split the step into two:
+
+```yaml
+- name: Set up Node.js
+  uses: actions/setup-node@v3
+
+- name: Install dependencies
+  run: npm install"
+Invalid workflow file: .github/worflows/broken-action-2.yml#L11 You have an error in your yaml syntax on line 11,"This means there’s a YAML syntax error on line 11 of your workflow file. YAML is whitespace- and indentation-sensitive, so even a small mistake can break the file. Common issues include:
+
+Mixing tabs and spaces
+
+Missing colons :
+
+Unquoted strings with special characters
+
+Incorrect indentation under jobs or steps","Steps to fix it:
+Open .github/workflows/broken-action-2.yml
+
+Go to line 11
+
+Check for:
+
+Missing colon : after a key
+
+Misaligned indentation
+
+Special characters (like : or #) in strings not wrapped in quotes",,,https://github.com/orgs/community/discussions/103033,Invalid workflow file: .github/worflows/broken-action-2.yml,"Failure Log: Invalid workflow file: .github/worflows/broken-action-2.yml#L11 You have an error in your yaml syntax on line 11
+Root Cause: This means there’s a YAML syntax error on line 11 of your workflow file. YAML is whitespace- and indentation-sensitive, so even a small mistake can break the file. Common issues include:
+
+- Mixing tabs and spaces  
+- Missing colons `:`  
+- Unquoted strings with special characters  
+- Incorrect indentation under `jobs` or `steps`
+
+Suggested Fix:  
+Steps to fix it:  
+1. Open `.github/workflows/broken-action-2.yml`  
+2. Go to **line 11**  
+3. Check for:  
+   - Missing colon `:` after a key  
+   - Misaligned indentation  
+   - Special characters (like `:` or `#`) in strings not wrapped in quotes","Failure Log: Invalid workflow file: .github/worflows/broken-action-2.yml#L11 You have an error in your yaml syntax on line 11
+
+Root Cause: This means there’s a YAML syntax error on line 11 of your workflow file. YAML is whitespace- and indentation-sensitive, so even a small mistake can break the file. Common issues include:
+
+- Mixing tabs and spaces  
+- Missing colons `:`  
+- Unquoted strings with special characters  
+- Incorrect indentation under `jobs` or `steps`
+
+Suggested Fix:  
+Steps to fix it:
+1. Open `.github/workflows/broken-action-2.yml`  
+2. Go to line 11  
+3. Check for:
+   - Missing colon `:` after a key  
+   - Misaligned indentation  
+   - Special characters (like `:` or `#`) in strings not wrapped in quotes
+
+---
+
+Failure Log:
+Running command audit...
+? Checking if the config file is fine... OK  
+? 1) Broken link: https://medium.com/poka-techblog/simplify-your-javascript  
+? 2) Broken link: https://medium.com/poka-techblog/simplify-your-javascript  
+? We found 6 errors related with the project integrity.  
+##[error]Process completed with exit code 1.
+
+Root Cause: Audit failed due to broken external links in documentation or exercise files.
+
+Suggested Fix:  
+Replace or remove outdated or broken URLs in the content.
+
+---
+
+Failure Log:
+Run python script.py  
+Traceback (most recent call last):  
+  File ""script.py"", line 5, in <module>  
+    import nonexistent_module  
+ModuleNotFoundError: No module named 'nonexistent_module'  
+Error: Process completed with exit code 1.
+
+Root Cause: The Python script attempts to import a module that isn't installed in the environment, leading to a `ModuleNotFoundError`.
+
+Suggested Fix:  
+Ensure that all required Python modules are listed in the `requirements.txt` file,  
+and install them using `pip install -r requirements.txt` before running the script.","Failure Log:
+Invalid workflow file: .github/worflows/broken-action-2.yml#L11  
+You have an error in your yaml syntax on line 11
+
+Root Cause: YAML syntax error on line 11 of the GitHub Actions workflow. Likely caused by:
+- Improper indentation  
+- Missing colon (`:`)  
+- Use of unquoted special characters
+
+Suggested Fix:  
+Inspect line 11 closely in `.github/workflows/broken-action-2.yml`.  
+Use a YAML linter to identify structural issues.
+
+---
+
+Failure Log:
+Error: .github#L1 a step cannot have both the `uses` and `run` keys
+
+Root Cause: A single step in your workflow uses both `uses` and `run` keys, which is not allowed.
+
+Suggested Fix:  
+Split the step into two:
+
+```yaml
+- name: Setup Node
+  uses: actions/setup-node@v3
+
+- name: Install packages
+  run: npm install"
+"/__w/_temp/36dfc03e-56ed-43fa-9019-85d8b151f42a.sh: 2: python3: not found
+Running python here. Error: Process completed with exit code 127.","The workflow tried to run python3, but the command wasn't found in the environment. This usually means:
+
+The GitHub Actions runner doesn't have Python 3 installed
+or
+
+You’re using a Docker container or environment that doesn’t include Python
+
+Exit code 127 specifically means: “command not found”.","You’re going to want to look into what software packages the docker image referenced on in the image: key has. Does rocker/r-base image have Python?
+
+If not, you may need to look for a Docker image to use that has python. We’ve used one in a previous example that you could borrow.",,,https://github.com/orgs/community/discussions/41497,Running python here. Error: Process completed with exit code 127.,"Failure Log: /__w/_temp/36dfc03e-56ed-43fa-9019-85d8b151f42a.sh: 2: python3: not found
+Running python here. Error: Process completed with exit code 127.
+
+Root Cause: The workflow tried to run python3, but the command wasn't found in the environment. This usually means:
+
+- The GitHub Actions runner doesn't have Python 3 installed  
+**or**  
+- You’re using a Docker container or environment that doesn’t include Python
+
+Exit code 127 specifically means: “command not found.”
+
+Suggested Fix:  
+You’re going to want to look into what software packages the Docker image referenced in the `image:` key has.  
+Does `rocker/r-base` image have Python? If not, you may need to use a Docker image that includes Python.  
+We’ve used one in a previous example that you could borrow.","Failure Log:
+/__w/_temp/36dfc03e-56ed-43fa-9019-85d8b151f42a.sh: 2: python3: not found
+Running python here. Error: Process completed with exit code 127.
+
+Root Cause: The workflow tried to run `python3`, but the command wasn't found in the environment.  
+This usually means:
+- The GitHub Actions runner doesn't have Python 3 installed  
+**or**
+- You're using a Docker container or custom environment that doesn’t include Python
+
+Exit code 127 specifically means: “command not found.”
+
+Suggested Fix:  
+Check whether the Docker image or environment you're using contains Python 3.  
+If not, switch to an image that includes Python, such as:
+
+```yaml
+container:
+  image: python:3.9","Failure Log:
+/__w/_temp/36dfc03e-56ed-43fa-9019-85d8b151f42a.sh: 2: python3: not found  
+Running python here. Error: Process completed with exit code 127.
+
+Root Cause: The workflow tried to run `python3`, but the command wasn’t found. This typically means:
+- The runner or Docker image does not have Python 3 installed
+
+Suggested Fix:  
+- Use a Docker image or GitHub runner that includes Python  
+- Or add a setup step like:
+
+```yaml
+- uses: actions/setup-python@v4
+  with:
+    python-version: '3.11'"
+"Run npm test
+> my-app@1.0.0 test
+> jest
+
+No tests found, exiting with code 1
+Run failed
+##[error]Process completed with exit code 1.
+","The error message is not clear enough but probably Jest didn’t find any test files to run. This could happen due to:
+
+Wrong test file naming
+
+Misconfigured jest.config.js
+
+Tests accidentally excluded (e.g., by .gitignore or missing in commit)","If your GitHub Actions workflow fails without clear error messages, here's a short answer to help you troubleshoot:
+
+Check Logs:
+Go to the ""Actions"" tab, select the failed workflow, and review the logs for error messages or step failures.
+Enable Debug Logging:
+Add ACTIONS_RUNNER_DEBUG=true and ACTIONS_STEP_DEBUG=true to your workflow's environment variables for detailed logs.
+Look at Recent Changes:
+If you've made recent changes, they could be causing the issue. Try reverting or re-testing those changes.
+Retry the Workflow:
+Sometimes, workflows fail due to temporary issues. Try running the workflow again to see if it resolves the problem.",,,https://github.blog/changelog/2022-05-24-github-actions-re-run-jobs-with-debug-logging/,Run failed,"Failure Log: Run npm test
+> my-app@1.0.0 test
+> jest
+
+No tests found, exiting with code 1
+Run failed
+##[error]Process completed with exit code 1.
+
+Root Cause: The error message is not clear enough but probably Jest didn’t find any test files to run. This could happen due to:
+
+- Wrong test file naming  
+- Misconfigured `jest.config.js`  
+- Tests accidentally excluded (e.g., by `.gitignore` or not committed)
+
+Suggested Fix:  
+If your GitHub Actions workflow fails without clear error messages, here’s a quick guide to troubleshoot:
+
+1. **Check Logs**:  
+   Go to the **“Actions”** tab, select the failed workflow, and review the logs for any detailed errors.
+
+2. **Enable Debug Logging**:  
+   Add `ACTIONS_RUNNER_DEBUG=true` and `ACTIONS_STEP_DEBUG=true` to your workflow's `env:` section.
+
+3. **Look at Recent Changes**:  
+   Recent code or config changes might be causing the issue. Test or revert them if needed.
+
+4. **Retry the Workflow**:  
+   Temporary network or service issues can also trigger failures — try rerunning the workflow.","Failure Log: Run npm test
+> my-app@1.0.0 test
+> jest
+
+No tests found, exiting with code 1
+Run failed
+##[error]Process completed with exit code 1.
+
+Root Cause: Jest likely didn’t find any test files to run.  
+This could happen due to:
+- Wrong test file naming  
+- Misconfigured `jest.config.js`  
+- Tests being ignored or missing from commit
+
+Suggested Fix:  
+- Check the test file paths and naming  
+- Ensure test files are committed  
+- Inspect `jest.config.js` for inclusion/exclusion rules  
+- Review the workflow logs or enable debug logging for more detail
+
+---
+
+Failure Log:
+#15 [internal] load metadata for docker.io/medicmobile/cht-haproxy:...
+#15 ERROR: failed to resolve reference: pull access denied for medicmobile/cht-haproxy, repository does not exist or may require authorization:  
+server message: insufficient_scope: authorization failed  
+Error: buildx failed with: ERROR: failed to solve: failed to fetch anonymous token: unexpected status: 401 Unauthorized  
+##[error]Process completed with exit code 1.
+
+Root Cause: Docker couldn’t fetch the image — either the image:
+- Doesn’t exist  
+- Is private and needs authentication  
+- Was never pushed
+
+Suggested Fix:  
+- Verify image name/tag  
+- Authenticate with Docker Hub using secrets (`DOCKER_USERNAME`, `DOCKER_PASSWORD`)  
+- Ensure the image is built and pushed before use  
+- Make the repo public if needed
+
+---
+
+Failure Log: Error: .github#L1 a step cannot have both the `uses` and `run` keys
+
+Root Cause: You cannot use both `uses` and `run` in the same step in a GitHub Actions YAML file.  
+This results in a validation error at the workflow level.
+
+Suggested Fix:  
+Split into separate steps:
+
+```yaml
+- name: Checkout code
+  uses: actions/checkout@v3
+
+- name: Run setup
+  run: npm install","Failure Log:
+Run npm test  
+> my-app@1.0.0 test  
+> jest  
+No tests found, exiting with code 1  
+Run failed  
+##[error]Process completed with exit code 1.
+
+Root Cause: Jest didn’t find any test files. Possible reasons:
+- No tests are present
+- Wrong test naming convention
+- Tests are ignored by `.gitignore` or not committed
+
+Suggested Fix:  
+Ensure test files exist and are named correctly (e.g., `*.test.js`).  
+Check your `jest.config.js` and commit any untracked test files.re Log:"
+"Run npm install
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! 
+npm ERR! While resolving: @typescript-eslint/eslint-plugin@4.28.2
+npm ERR! Found: eslint@7.32.0
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peer eslint@""^5.0.0 || ^6.0.0"" from @typescript-eslint/eslint-plugin@4.28.2
+npm ERR! node_modules/@typescript-eslint/eslint-plugin
+npm ERR!   dev @typescript-eslint/eslint-plugin@""^4.28.2"" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force, or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! See /home/runner/.npm/eresolve-report.txt for a full report.
+Error: Process completed with exit code 1.","This error occurs due to a version conflict between @typescript-eslint/eslint-plugin and eslint. The plugin requires eslint version 5 or 6, but version 7.32.0 is installed.","Update @typescript-eslint/eslint-plugin to a version compatible with eslint@7.32.0, or adjust the eslint version to match the plugin's peer dependency requirements.",,,https://github.com/orgs/community/discussions/7381,Error: Process completed with exit code 1.,"Failure Log: Run npm install
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+
+While resolving: @typescript-eslint/eslint-plugin@4.28.2  
+Found: eslint@7.32.0  
+
+Could not resolve dependency:  
+peer eslint@""^5.0.0 || ^6.0.0"" from @typescript-eslint/eslint-plugin@4.28.2  
+node_modules/@typescript-eslint/eslint-plugin  
+  dev @typescript-eslint/eslint-plugin@""^4.28.2"" from the root project
+
+Fix the upstream dependency conflict, or retry with --force or --legacy-peer-deps  
+Error: Process completed with exit code 1.
+
+Root Cause: This error occurs due to a version conflict between `@typescript-eslint/eslint-plugin` and `eslint`.  
+The plugin requires eslint version 5 or 6, but version 7.32.0 is installed.
+
+Suggested Fix:  
+Update `@typescript-eslint/eslint-plugin` to a version compatible with `eslint@7.32.0`,  
+or adjust the `eslint` version to match the plugin's peer dependency requirements.","Failure Log:
+Run docker build -t my-image .
+Sending build context to Docker daemon  2.048kB
+Step 1/5 : FROM node:14
+14: Pulling from library/node
+no matching manifest for linux/amd64 in the manifest list entries
+Error: Process completed with exit code 1.
+
+Root Cause: The specified Docker image (`node:14`) doesn't have a manifest compatible with the `linux/amd64` architecture, causing the build to fail.
+
+Suggested Fix:  
+Specify a valid image tag that supports the `linux/amd64` architecture,  
+or use a different base image compatible with the target architecture.
+
+---
+
+Failure Log:
+Run npm install
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+While resolving: @typescript-eslint/eslint-plugin@4.28.2  
+Found: eslint@7.32.0  
+Could not resolve dependency:  
+peer eslint@""^5.0.0 || ^6.0.0"" from @typescript-eslint/eslint-plugin@4.28.2  
+Error: Process completed with exit code 1.
+
+Root Cause: Version conflict between `@typescript-eslint/eslint-plugin` and `eslint`.  
+The plugin requires eslint v5 or v6, but v7.32.0 is installed.
+
+Suggested Fix:  
+Update `@typescript-eslint/eslint-plugin` to be compatible with `eslint@7.32.0`  
+or adjust the `eslint` version in your `package.json`.  
+Alternatively, run `npm install --legacy-peer-deps`.
+
+---
+
+Failure Log:
+Run python script.py
+Traceback (most recent call last):
+  File ""script.py"", line 5, in <module>
+    import nonexistent_module
+ModuleNotFoundError: No module named 'nonexistent_module'
+Error: Process completed with exit code 1.
+
+Root Cause: The Python script attempts to import a module that isn’t installed in the environment, leading to `ModuleNotFoundError`.
+
+Suggested Fix:  
+Ensure that all required Python modules are listed in `requirements.txt`,  
+and install them with:
+
+```bash
+pip install -r requirements.txt","Failure Log:
+Run npm install  
+npm ERR! code ERESOLVE  
+npm ERR! ERESOLVE could not resolve  
+While resolving: @typescript-eslint/eslint-plugin@4.28.2  
+Found: eslint@7.32.0  
+Could not resolve dependency:  
+peer eslint@""^5.0.0 || ^6.0.0"" from @typescript-eslint/eslint-plugin@4.28.2  
+Error: Process completed with exit code 1.
+
+Root Cause: This error occurs due to a version conflict between `@typescript-eslint/eslint-plugin` and `eslint`.  
+The plugin requires eslint version 5 or 6, but version 7.32.0 is installed.
+
+Suggested Fix:  
+- Update `@typescript-eslint/eslint-plugin` to a version compatible with `eslint@7.32.0`,  
+- or adjust `eslint` to match the peer dependency."
+"Run node app.js
+internal/fs/utils.js:230
+  throw err;
+  ^
+
+Error: ENOENT: no such file or directory, open '/home/runner/work/my-repo/my-repo/.env'
+    at Object.openSync (fs.js:476:3)
+    at Object.readFileSync (fs.js:377:35)
+    at Object.<anonymous> (/home/runner/work/my-repo/my-repo/app.js:10:15)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47 {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/home/runner/work/my-repo/my-repo/.env'
+}
+Error: ENOENT: no such file or directory, open '/home/runner/work/my-repo/my-repo/.env'","The application attempts to read a .env file that doesn't exist in the repository, leading to a ""No such file or directory"" error.",Ensure that the .env file is present in the repository or modify the application to handle the absence of the .env file gracefully.,,,https://stackoverflow.com/questions/69542929/is-there-a-way-to-log-error-responses-from-github-actions,"Error: ENOENT: no such file or directory, open '/home/runner/work/my-repo/my-repo/.env'","Failure Log: Run node app.js
+internal/fs/utils.js:230
+  throw err;
+  ^
+
+Error: ENOENT: no such file or directory, open '/home/runner/work/my-repo/my-repo/.env'
+    at Object.openSync (fs.js:476:3)
+    at Object.readFileSync (fs.js:377:35)
+    at Object.<anonymous> (/home/runner/work/my-repo/my-repo/app.js:10:15)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    ...
+Error: ENOENT: no such file or directory, open '/home/runner/work/my-repo/my-repo/.env'
+
+Root Cause: The application attempts to read a `.env` file that doesn't exist in the repository, leading to a “No such file or directory” error.
+
+Suggested Fix:  
+Ensure that the `.env` file is present in the repository  
+—or—  
+Modify the application code to handle the absence of the `.env` file gracefully (e.g., by checking if it exists before reading it).","Failure Log:
+Run node app.js
+internal/fs/utils.js:230
+  throw err;
+  ^
+
+Error: ENOENT: no such file or directory, open '/home/runner/work/my-repo/my-repo/.env'
+    at Object.openSync (fs.js:476:3)
+    at Object.readFileSync (fs.js:377:35)
+    ...
+Error: ENOENT: no such file or directory, open '/home/runner/work/my-repo/my-repo/.env'
+
+Root Cause: The application attempts to read a `.env` file that doesn't exist in the repository, leading to a “No such file or directory” error.
+
+Suggested Fix:  
+Ensure that the `.env` file is present in the repository,  
+or modify the application to handle the absence of the `.env` file gracefully.
+
+---
+
+Failure Log:
+Traceback (most recent call last):
+  File ""script.py"", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+Error: ModuleNotFoundError: No module named 'requests'
+
+Root Cause: The Python script requires the `requests` module, which is not installed in the environment.
+
+Suggested Fix:  
+Add a step in the workflow to install dependencies using:
+
+```bash
+pip install -r requirements.txt","Failure Log:
+Run node app.js  
+Error: ENOENT: no such file or directory, open '/home/runner/work/my-repo/my-repo/.env'
+
+Root Cause: The application attempts to read a `.env` file that does not exist, causing a file-not-found error during execution.
+
+Suggested Fix:  
+- Make sure the `.env` file is present in the repository  
+- Or modify the application to handle missing environment variables gracefully"
+"Run git push origin HEAD:refs/heads/main
+remote: Permission to user/repo.git denied to github-actions[bot].
+fatal: unable to access 'https://github.com/user/repo.git/': The requested URL returned error: 403
+Error: Process completed with exit code 128.","The GitHub Actions bot lacks the necessary permissions to push changes to the repository, resulting in a 403 Forbidden error.",Use a Personal Access Token (PAT) with appropriate permissions instead of the default GITHUB_TOKEN to authenticate Git operations.,,,https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/monitoring-workflows/using-workflow-run-logs,Error: Process completed with exit code 128.,"Failure Log: Run git push origin HEAD:refs/heads/main
+remote: Permission to user/repo.git denied to github-actions[bot].
+fatal: unable to access 'https://github.com/user/repo.git/': The requested URL returned error: 403
+Error: Process completed with exit code 128.
+
+Root Cause: The GitHub Actions bot lacks the necessary permissions to push changes to the repository, resulting in a **403 Forbidden** error.
+
+Suggested Fix:  
+Use a **Personal Access Token (PAT)** with the correct scopes (e.g., `repo`)  
+instead of the default `GITHUB_TOKEN` when performing Git operations that require push access.","Failure Log:
+Run git push origin HEAD:refs/heads/main  
+remote: Permission to user/repo.git denied to github-actions[bot].  
+fatal: unable to access 'https://github.com/user/repo.git/': The requested URL returned error: 403  
+Error: Process completed with exit code 128.
+
+Root Cause: The GitHub Actions bot lacks the necessary permissions to push changes to the repository, resulting in a **403 Forbidden** error.
+
+Suggested Fix:  
+Use a **Personal Access Token (PAT)** with appropriate permissions instead of the default `GITHUB_TOKEN` to authenticate Git operations.
+
+---
+
+Failure Log:
+Run docker build -t my-image .  
+Sending build context to Docker daemon  2.048kB  
+Step 1/5 : FROM node:14  
+14: Pulling from library/node  
+no matching manifest for linux/amd64 in the manifest list entries  
+Error: Process completed with exit code 1.
+
+Root Cause: The specified Docker image (`node:14`) doesn’t have a manifest compatible with the `linux/amd64` architecture, causing the build to fail.
+
+Suggested Fix:  
+Specify a valid image tag that supports the `linux/amd64` architecture,  
+or use a different base image compatible with the target architecture.
+
+---
+
+Failure Log:
+Run npm install  
+npm ERR! code ERESOLVE  
+npm ERR! ERESOLVE could not resolve  
+While resolving: @typescript-eslint/eslint-plugin@4.28.2  
+Found: eslint@7.32.0  
+Could not resolve dependency:  
+peer eslint@""^5.0.0 || ^6.0.0"" from @typescript-eslint/eslint-plugin@4.28.2  
+Error: Process completed with exit code 1.
+
+Root Cause: A version conflict between `@typescript-eslint/eslint-plugin` and `eslint`.  
+The plugin requires eslint version 5 or 6, but version 7.32.0 is installed.
+
+Suggested Fix:  
+Update `@typescript-eslint/eslint-plugin` to be compatible with `eslint@7.32.0`,  
+or adjust the `eslint` version in your `package.json` to match the peer dependency requirements.","Failure Log:
+Run git push origin HEAD:refs/heads/main  
+remote: Permission to user/repo.git denied to github-actions[bot].  
+fatal: unable to access 'https://github.com/user/repo.git/': The requested URL returned error: 403  
+Error: Process completed with exit code 128.
+
+Root Cause: The GitHub Actions bot lacks the necessary permissions to push to the repository.  
+Exit code 128 indicates a Git-related fatal error (403: Forbidden).
+
+Suggested Fix:  
+Use a **Personal Access Token (PAT)** with `repo` scope instead of the default `GITHUB_TOKEN`.  
+Store it as a GitHub Secret and configure your push command to use it."
+"Run docker build -t my-image .
+Sending build context to Docker daemon  2.048kB
+Step 1/5 : FROM node:14
+14: Pulling from library/node
+no matching manifest for linux/amd64 in the manifest list entries
+Error: Process completed with exit code 1.","The specified Docker image (node:14) doesn't have a manifest compatible with the linux/amd64 architecture, causing the build to fail.","Specify a valid image tag that supports the linux/amd64 architecture, or use a different base image compatible with the target architecture.",,,https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/troubleshooting-workflows/enabling-debug-logging,Error: Process completed with exit code 1.,"Failure Log: Run npm install
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+
+While resolving: @typescript-eslint/eslint-plugin@4.28.2  
+Found: eslint@7.32.0  
+
+Could not resolve dependency:  
+peer eslint@""^5.0.0 || ^6.0.0"" from @typescript-eslint/eslint-plugin@4.28.2  
+node_modules/@typescript-eslint/eslint-plugin  
+  dev @typescript-eslint/eslint-plugin@""^4.28.2"" from the root project
+
+Fix the upstream dependency conflict, or retry with --force or --legacy-peer-deps  
+Error: Process completed with exit code 1.
+
+Root Cause: This error occurs due to a version conflict between `@typescript-eslint/eslint-plugin` and `eslint`.  
+The plugin requires eslint version 5 or 6, but version 7.32.0 is installed.
+
+Suggested Fix:  
+Update `@typescript-eslint/eslint-plugin` to a version compatible with `eslint@7.32.0`,  
+or adjust the `eslint` version to match the plugin's peer dependency requirements.","Failure Log:
+Run docker build -t my-image .
+Sending build context to Docker daemon  2.048kB
+Step 1/5 : FROM node:14
+14: Pulling from library/node
+no matching manifest for linux/amd64 in the manifest list entries
+Error: Process completed with exit code 1.
+
+Root Cause: The specified Docker image (`node:14`) doesn't have a manifest compatible with the `linux/amd64` architecture, causing the build to fail.
+
+Suggested Fix:  
+Specify a valid image tag that supports the `linux/amd64` architecture,  
+or use a different base image compatible with the target architecture.
+
+---
+
+Failure Log:
+Run npm install  
+npm ERR! code ERESOLVE  
+npm ERR! ERESOLVE could not resolve  
+While resolving: @typescript-eslint/eslint-plugin@4.28.2  
+Found: eslint@7.32.0  
+Could not resolve dependency:  
+peer eslint@""^5.0.0 || ^6.0.0"" from @typescript-eslint/eslint-plugin@4.28.2  
+Error: Process completed with exit code 1.
+
+Root Cause: This error occurs due to a version conflict between `@typescript-eslint/eslint-plugin` and `eslint`.  
+The plugin requires eslint version 5 or 6, but version 7.32.0 is installed.
+
+Suggested Fix:  
+Update `@typescript-eslint/eslint-plugin` to be compatible with `eslint@7.32.0`,  
+or adjust the `eslint` version to match the plugin's peer dependency requirements.
+
+---
+
+Failure Log:
+Run python script.py  
+Traceback (most recent call last):  
+  File ""script.py"", line 5, in <module>  
+    import nonexistent_module  
+ModuleNotFoundError: No module named 'nonexistent_module'  
+Error: Process completed with exit code 1.
+
+Root Cause: The Python script attempts to import a module that isn’t installed in the environment, leading to `ModuleNotFoundError`.
+
+Suggested Fix:  
+Ensure that all required Python modules are listed in `requirements.txt`,  
+and install them with:
+
+```bash
+pip install -r requirements.txt","Failure Log:
+Run docker build -t my-image .  
+Sending build context to Docker daemon  2.048kB  
+Step 1/5 : FROM node:14  
+14: Pulling from library/node  
+no matching manifest for linux/amd64 in the manifest list entries  
+Error: Process completed with exit code 1.
+
+Root Cause:  
+The specified Docker image (`node:14`) doesn't support the `linux/amd64` architecture used by the GitHub Actions runner.
+
+Suggested Fix:  
+Use a more specific image tag such as `node:14-buster`  
+or switch to a different base image that supports your target architecture."
+"Run python script.py
+Traceback (most recent call last):
+  File ""script.py"", line 5, in <module>
+    import nonexistent_module
+ModuleNotFoundError: No module named 'nonexistent_module'
+Error: Process completed with exit code 1.","The Python script attempts to import a module that isn't installed in the environment, leading to a ModuleNotFoundError.",Ensure that all required Python modules are listed in the requirements.txt file and install them using pip install -r requirements.txt before running the script.,,,,Error: Process completed with exit code 1.,"Failure Log: Run npm install
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+
+While resolving: @typescript-eslint/eslint-plugin@4.28.2  
+Found: eslint@7.32.0  
+
+Could not resolve dependency:  
+peer eslint@""^5.0.0 || ^6.0.0"" from @typescript-eslint/eslint-plugin@4.28.2  
+node_modules/@typescript-eslint/eslint-plugin  
+  dev @typescript-eslint/eslint-plugin@""^4.28.2"" from the root project
+
+Fix the upstream dependency conflict, or retry with --force or --legacy-peer-deps  
+Error: Process completed with exit code 1.
+
+Root Cause: This error occurs due to a version conflict between `@typescript-eslint/eslint-plugin` and `eslint`.  
+The plugin requires eslint version 5 or 6, but version 7.32.0 is installed.
+
+Suggested Fix:  
+Update `@typescript-eslint/eslint-plugin` to a version compatible with `eslint@7.32.0`,  
+or adjust the `eslint` version to match the plugin's peer dependency requirements.","Failure Log:
+Traceback (most recent call last):
+  File ""script.py"", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+Error: ModuleNotFoundError: No module named 'requests'
+
+Root Cause: The Python script requires the `requests` module, which is not installed in the environment.
+
+Suggested Fix:  
+Add a step in the workflow to install the required dependencies, typically using:
+
+```bash
+pip install -r requirements.txt","Failure Log:
+Run python script.py  
+Traceback (most recent call last):  
+  File ""script.py"", line 5, in <module>  
+    import nonexistent_module  
+ModuleNotFoundError: No module named 'nonexistent_module'  
+Error: Process completed with exit code 1.
+
+Root Cause:  
+The script tries to import a Python module that is not installed.
+
+Suggested Fix:  
+Add the missing module to `requirements.txt`, then:
+
+```bash
+pip install -r requirements.txt "
+"The workflow is not valid. .github/workflows/deploy.yml (Line: 15, Col: 9): mapping values are not allowed in this context. Error: YAML syntax error: mapping values are not allowed in this context
+","This error indicates a syntax issue in the YAML file, often due to incorrect indentation or formatting.",Review the workflow file for proper YAML syntax. Utilize YAML validators to identify and correct formatting issues.,,,https://github.com/github/docs/blob/main/content/actions/monitoring-and-troubleshooting-workflows/troubleshooting-workflows/enabling-debug-logging.md,Error: YAML syntax error: mapping values are not allowed in this context,"Failure Log: The workflow is not valid. .github/workflows/deploy.yml (Line: 15, Col: 9): mapping values are not allowed in this context. 
+Error: YAML syntax error: mapping values are not allowed in this context
+
+Root Cause: This error indicates a syntax issue in the YAML file,  
+often due to incorrect **indentation** or **invalid formatting** such as colons `:` being used incorrectly.
+
+Suggested Fix:  
+Review the file `.github/workflows/deploy.yml` — especially **line 15** — and check for:
+- Proper indentation  
+- Use of quotes around strings with special characters  
+- Missing keys or values after a colon
+
+You can also run your file through a **YAML validator** to pinpoint the exact issue quickly.","Failure Log:
+The workflow is not valid. .github/workflows/deploy.yml (Line: 15, Col: 9): mapping values are not allowed in this context.  
+Error: YAML syntax error: mapping values are not allowed in this context
+
+Root Cause: This error indicates a syntax issue in the YAML file, often due to incorrect indentation or formatting.
+
+Suggested Fix:  
+Review the workflow file for proper YAML syntax.  
+Utilize [YAML validators](https://yamlvalidator.com/) to identify and correct formatting issues.
+
+---
+
+Failure Log:
+Error: Killed
+
+Root Cause: The process was terminated due to exceeding memory limits, often occurring when multiple workflows run concurrently or when a single job uses too much memory.
+
+Suggested Fix:  
+- Optimize your workflow steps to use less memory  
+- Configure concurrency settings to prevent overlapping jobs  
+```yaml
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true","Failure Log:
+The workflow is not valid. .github/workflows/deploy.yml (Line: 15, Col: 9):  
+mapping values are not allowed in this context.  
+Error: YAML syntax error: mapping values are not allowed in this context
+
+Root Cause:  
+This error indicates a syntax issue in the YAML file, typically caused by incorrect indentation or a missing colon.
+
+Suggested Fix:  
+Review the YAML syntax on line 15 using a linter like [yamlint.com](https://yamlint.com).  
+Make sure mappings follow the `key: value` format and all indentation levels are consistent."
+"remote: Permission to user/repo.git denied to github-actions[bot].
+fatal: unable to access 'https://github.com/user/repo.git/': The requested URL returned error: 403. Error: Permission denied to access repository",The GitHub Actions runner lacks the necessary permissions to access the repository.,"Ensure that the workflow has the correct permissions set. If accessing another repository, use a Personal Access Token (PAT) with appropriate scopes.",,,https://docs.github.com/fr/actions/monitoring-and-troubleshooting-workflows/monitoring-workflows/using-workflow-run-logs,Error: Permission denied to access repository,"Failure Log: remote: Permission to user/repo.git denied to github-actions[bot].
+fatal: unable to access 'https://github.com/user/repo.git/': The requested URL returned error: 403. 
+Error: Permission denied to access repository
+
+Root Cause: The GitHub Actions runner lacks the necessary permissions to access the repository.  
+This usually happens when using the default `GITHUB_TOKEN`, which has limited scopes — especially for cross-repository operations.
+
+Suggested Fix:  
+Ensure the workflow has the proper permissions.  
+If you're trying to push or clone from another repository, use a **Personal Access Token (PAT)** with the `repo` scope,  
+and store it as a secret in your repository (e.g., `GH_PAT`).  
+Then authenticate using this token in your workflow steps.","Failure Log:
+remote: Permission to user/repo.git denied to github-actions[bot].
+fatal: unable to access 'https://github.com/user/repo.git/': The requested URL returned error: 403.
+Error: Permission denied to access repository
+
+Root Cause: The GitHub Actions runner lacks the necessary permissions to access the repository.
+
+Suggested Fix:  
+Ensure that the workflow has the correct permissions set.  
+If accessing another repository, use a Personal Access Token (PAT) with appropriate scopes.
+
+---
+
+Failure Log:
+#15 [internal] load metadata for docker.io/medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888  
+#15 ERROR: failed to resolve reference: pull access denied for medicmobile/cht-haproxy, repository does not exist or may require authorization:  
+server message: insufficient_scope: authorization failed  
+...
+Error: buildx failed with: ERROR: failed to solve: failed to fetch anonymous token: unexpected status: 401 Unauthorized  
+##[error]Process completed with exit code 1.
+
+Root Cause: GitHub Actions could not access a private or non-existent Docker image due to lack of authentication or incorrect image tag.
+
+Suggested Fix:  
+- Verify the image name and tag  
+- Make the Docker image public or authenticate using Docker credentials (`DOCKER_USERNAME`, `DOCKER_PASSWORD`)  
+- Make sure the image is pushed before attempting to pull it
+
+---
+
+Failure Log:
+> eslint-plugin-eslint-plugin@6.0.0 test  
+> nyc --all --check-coverage --include lib mocha tests --recursive  
+
+Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.  
+Instead change require to dynamic import() or update project to ESM modules.  
+##[error]Process completed with exit code 1.
+
+Root Cause: The project uses `require()` with an ES Module, which is unsupported.
+
+Suggested Fix:  
+Switch to using dynamic `import()` or convert the project to fully use ES modules (`type: ""module""` in `package.json`).","Failure Log:
+remote: Permission to user/repo.git denied to github-actions[bot].  
+fatal: unable to access 'https://github.com/user/repo.git/': The requested URL returned error: 403  
+Error: Permission denied to access repository
+
+Root Cause:  
+The GitHub Actions runner lacks permission to access the repository — likely due to insufficient token scopes.
+
+Suggested Fix:  
+Use a **Personal Access Token (PAT)** with `repo` scope instead of the default `GITHUB_TOKEN`.  
+Store it as a secret and configure your `git push` or access accordingly."
+"Traceback (most recent call last):
+  File ""script.py"", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'. Error: ModuleNotFoundError: No module named 'requests'","The Python script requires the requests module, which is not installed in the environment.","Add a step in the workflow to install the required dependencies, typically using pip install -r requirements.txt.",,,https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/troubleshooting-workflows,Error: ModuleNotFoundError: No module named 'requests',"Failure Log: Traceback (most recent call last):
+  File ""script.py"", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+Error: ModuleNotFoundError: No module named 'requests'
+
+Root Cause: The Python script requires the `requests` module, but it's not installed in the current environment.
+
+Suggested Fix:  
+Add a step to your GitHub Actions workflow to install the required Python packages.  
+For example, if you’re using a `requirements.txt` file, add:
+
+```yaml
+- name: Install dependencies
+  run: pip install -r requirements.txt","Failure Log:
+Traceback (most recent call last):
+  File ""script.py"", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+Error: ModuleNotFoundError: No module named 'requests'
+
+Root Cause: The Python script requires the `requests` module, which is not installed in the environment.
+
+Suggested Fix:  
+Add a step in the workflow to install the required dependencies, typically using:
+
+```bash
+pip install -r requirements.txt","Failure Log:
+Traceback (most recent call last):  
+  File ""script.py"", line 1, in <module>  
+    import requests  
+ModuleNotFoundError: No module named 'requests'  
+Error: ModuleNotFoundError: No module named 'requests'
+
+Root Cause:  
+The Python script requires the `requests` module, which is not installed in the environment.
+
+Suggested Fix:  
+Add a step in your workflow to install dependencies:
+
+```bash
+pip install -r requirements.txt"
+Error: Killed,"The process was terminated due to exceeding memory limits, often occurring when multiple workflows run concurrently.","Optimize the workflow to use less memory, or configure concurrency settings to limit simultaneous runs.",,,https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows,Error: Killed,"Failure Log: Error: Killed
+
+Root Cause: The process was terminated by the system due to exceeding memory limits.  
+This often happens when the workflow consumes too much RAM, or when multiple workflows run concurrently on limited resources.
+
+Suggested Fix:  
+- Optimize your workflow to reduce memory usage (e.g., by batching operations or using lighter dependencies).  
+- Use GitHub Actions' `concurrency` feature to limit simultaneous job executions:
+
+```yaml
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true","Failure Log:
+Error: Killed
+
+Root Cause: The process was terminated due to exceeding memory limits, often occurring when multiple workflows run concurrently or a single step consumes too much memory.
+
+Suggested Fix:  
+- Optimize your code or data processing to reduce memory usage  
+- Split memory-heavy steps into smaller chunks  
+- Limit concurrency in your workflow:
+
+```yaml
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true","Failure Log:
+Error: Killed
+
+Root Cause:  
+The process was terminated due to high memory usage or exceeded GitHub Actions resource limits.
+
+Suggested Fix:  
+Optimize memory usage in the workflow or set concurrency limits to reduce resource contention."
+"#15 [internal] load metadata for docker.io/medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888
+#15 ERROR: failed to resolve reference: pull access denied for medicmobile/cht-haproxy, repository does not exist or may require authorization: 
+server message: insufficient_scope: authorization failed
+
+------
+ > [internal] load metadata for docker.io/medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888:
+------
+failed to solve with frontend dockerfile.v0: failed to create LLB definition: failed to authorize: rpc error: code = Unknown desc = 
+failed to fetch anonymous token: unexpected status: 401 Unauthorized
+Error: buildx failed with: ERROR: failed to solve: failed to fetch anonymous token: unexpected status: 401 Unauthorized
+##[error]Process completed with exit code 1.","This error occurs because GitHub Actions cannot pull the Docker image medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 from Docker Hub. The image either:
+
+Does not exist
+
+Is private and requires authentication
+
+Was mistyped or built locally but never pushed","Here are the steps to resolve it:
+
+Check the image name and tag
+
+Make sure the tag is correct. If it’s dynamically generated (like one based on a branch or hash), verify the build actually produced it.
+
+Make the image public (if intended)
+
+On Docker Hub, go to the repository settings and switch it to public if it was meant to be public.
+
+Authenticate with Docker Hub (for private images)
+
+Add secrets DOCKER_USERNAME and DOCKER_PASSWORD to your repo
+
+Authenticate before the build:
+
+yaml
+
+- name: Log in to Docker Hub
+  run: echo ""${{ secrets.DOCKER_PASSWORD }}"" | docker login -u ""${{ secrets.DOCKER_USERNAME }}"" --password-stdin
+Push the image if it's missing
+If the image tag is generated in a prior CI step, ensure it’s being built and pushed:
+
+bash
+
+docker build -t medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 .
+docker push medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.913710",,,,Error: buildx failed with: ERROR: failed to solve: failed to fetch anonymous token: unexpected status: 401 Unauthorized,"Failure Log:
+#15 [internal] load metadata for docker.io/medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888
+#15 ERROR: failed to resolve reference: pull access denied for medicmobile/cht-haproxy, repository does not exist or may require authorization:
+server message: insufficient_scope: authorization failed
+
+failed to solve with frontend dockerfile.v0: failed to create LLB definition: failed to authorize: rpc error: code = Unknown desc =
+failed to fetch anonymous token: unexpected status: 401 Unauthorized
+Error: buildx failed with: ERROR: failed to solve: failed to fetch anonymous token: unexpected status: 401 Unauthorized
+
+Root Cause: GitHub Actions cannot pull the Docker image `medicmobile/cht-haproxy:...` from Docker Hub.  
+The image either:
+- Does not exist  
+- Is private and requires authentication  
+- Was mistyped or built locally but never pushed
+
+Suggested Fix:
+1. **Check the image name and tag**  
+   Make sure it's typed correctly and actually exists.
+
+2. **Make the image public** (if intended)  
+   Go to Docker Hub ? repo settings ? switch to public.
+
+3. **Authenticate with Docker Hub** (for private images):  
+   Add `DOCKER_USERNAME` and `DOCKER_PASSWORD` as GitHub secrets. Then:
+
+```yaml
+- name: Log in to Docker Hub
+  run: echo ""${{ secrets.DOCKER_PASSWORD }}"" | docker login -u ""${{ secrets.DOCKER_USERNAME }}"" --password-stdin","Failure Log:
+#15 [internal] load metadata for docker.io/medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888
+#15 ERROR: failed to resolve reference: pull access denied for medicmobile/cht-haproxy, repository does not exist or may require authorization:
+server message: insufficient_scope: authorization failed
+
+failed to solve with frontend dockerfile.v0: failed to create LLB definition: failed to authorize: rpc error: code = Unknown desc = 
+failed to fetch anonymous token: unexpected status: 401 Unauthorized
+Error: buildx failed with: ERROR: failed to solve: failed to fetch anonymous token: unexpected status: 401 Unauthorized
+
+Root Cause: GitHub Actions cannot pull the Docker image `medicmobile/cht-haproxy` from Docker Hub. The image either:
+- Does not exist  
+- Is private and requires authentication  
+- Was mistyped or built locally but never pushed
+
+Suggested Fix:
+1. **Check image name and tag** — verify spelling and tag version
+2. **Make the image public** (via Docker Hub repo settings)
+3. **Add Docker Hub credentials** as GitHub Secrets and log in:
+```yaml
+- name: Log in to Docker Hub
+  run: echo ""${{ secrets.DOCKER_PASSWORD }}"" | docker login -u ""${{ secrets.DOCKER_USERNAME }}"" --password-stdin","Failure Log:
+#15 ERROR: failed to resolve reference: pull access denied for medicmobile/cht-haproxy  
+failed to solve: failed to fetch anonymous token: unexpected status: 401 Unauthorized  
+Error: buildx failed with: ERROR: failed to solve: failed to fetch anonymous token: unexpected status: 401 Unauthorized
+
+Root Cause:  
+GitHub Actions is trying to pull a Docker image that:
+- Does not exist,
+- Is private and unauthenticated,
+- Or has a mistyped tag.
+
+Suggested Fix:  
+? Ensure the image exists and is correctly named  
+?? If private, add `DOCKER_USERNAME` and `DOCKER_PASSWORD` as GitHub Secrets and log in before building:
+
+```yaml
+- name: Log in to Docker Hub
+  run: echo ""${{ secrets.DOCKER_PASSWORD }}"" | docker login -u ""${{ secrets.DOCKER_USERNAME }}"" --password-stdin"
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.,,,,##[error]Process completed with exit code 1.,"Failure Log:
+##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.
+
+Root Cause: NPM install failed due to a **dependency version conflict** between `file-loader` and `ttf-loader`.  
+The versions in your project are incompatible, and npm can't resolve them under strict peer dependency rules.
+
+Suggested Fix:  
+Use one of the following approaches:
+1. Run the install with relaxed peer dependencies:
+```bash
+npm install --legacy-peer-deps","Failure Log:
+##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.
+
+Root Cause: NPM install failed due to a version conflict between `file-loader` and `ttf-loader`.
+
+Suggested Fix:  
+Run the install with:
+
+```bash
+npm install --legacy-peer-deps","Failure Log:
+##[group]Run npm ci  
+npm ci  
+shell: /usr/bin/bash -e {0}  
+##[endgroup]  
+npm ERR! code ERESOLVE  
+npm ERR! ERESOLVE could not resolve  
+While resolving: ttf-loader@1.0.2  
+Found: file-loader@4.3.0  
+Could not resolve dependency:  
+peer file-loader@""^1.1.6"" from ttf-loader@1.0.2  
+##[error]Process completed with exit code 1.
+
+Root Cause: NPM install failed due to a version conflict between `file-loader` and `ttf-loader`.
+
+Suggested Fix:  
+Run:
+
+```bash
+npm install --legacy-peer-deps"
+"> eslint-plugin-eslint-plugin@6.0.0 test
+> nyc --all --check-coverage --include lib mocha tests --recursive
+
+ Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.
+ Instead change require to dynamic import() or update project to ESM modules.
+##[error]Process completed with exit code 1.","CommonJS require() used on an ES module, which is not supported.",Use dynamic import() or migrate the project to ES module format.,,,,"Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.
+Instead change require to dynamic import() or update project to ESM modules.
+##[error]Process completed with exit code 1.","Failure Log:
+> eslint-plugin-eslint-plugin@6.0.0 test
+> nyc --all --check-coverage --include lib mocha tests --recursive
+
+Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.
+Instead change require to dynamic import() or update project to ESM modules.
+##[error]Process completed with exit code 1.
+
+Root Cause: The script is trying to use `require()` on a module that is written as an ES module (ESM).  
+Since Node.js doesn’t allow CommonJS-style `require()` on ESM, it throws this error.
+
+Suggested Fix:
+- Switch to using `import()` instead of `require()` for that module  
+**OR**
+- Migrate your project to ESM by:
+  1. Adding `""type"": ""module""` in your `package.json`
+  2. Renaming `.js` files to `.mjs` (if needed)
+  3. Using `import`/`export` syntax instead of `require()`/`module.exports`","Failure Log:
+> eslint-plugin-eslint-plugin@6.0.0 test  
+> nyc --all --check-coverage --include lib mocha tests --recursive
+
+Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.  
+Instead change require to dynamic import() or update project to ESM modules.  
+##[error]Process completed with exit code 1.
+
+Root Cause: The project is attempting to use `require()` on an ES module. ES modules are not compatible with CommonJS-style `require()`.
+
+Suggested Fix:  
+- Use dynamic `import()` instead of `require()`  
+- Or convert your project to ES module format by adding `""type"": ""module""` to your `package.json`  
+- Ensure all dependencies and build tools are compatible with ESM
+
+---
+
+Failure Log:
+##[group]Run npm ci  
+npm ci  
+shell: /usr/bin/bash -e {0}  
+##[endgroup]  
+npm ERR! code ERESOLVE  
+npm ERR! ERESOLVE could not resolve  
+While resolving: ttf-loader@1.0.2  
+Found: file-loader@4.3.0  
+Could not resolve dependency:  
+peer file-loader@""^1.1.6"" from ttf-loader@1.0.2  
+##[error]Process completed with exit code 1.
+
+Root Cause: Dependency conflict between `file-loader` and `ttf-loader` due to incompatible version ranges.
+
+Suggested Fix:  
+Run:
+```bash
+npm install --legacy-peer-deps","Failure Log:
+
+eslint-plugin-eslint-plugin@6.0.0 test
+nyc --all --check-coverage --include lib mocha tests --recursive
+Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.
+##[error]Process completed with exit code 1.
+
+Root Cause:
+CommonJS require() was used for an ES module.
+
+Suggested Fix:
+? Replace require() with dynamic import()
+? Or update project with ""type"": ""module"" in package.json"
+"Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+  1) """"before all"""" hook: beforeAll in """"{root}""""
+INFO[0000] Deleting cluster 'cht-e2e'                   
+##[error]Process completed with exit code 1.",Docker build failed due to a non-existent image tag in DockerHub.,Ensure the image and tag exist or build and push the required version before using it.,,,,"Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+##[error]Process completed with exit code 1.","Failure Log:
+Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+  1) """"before all"""" hook: beforeAll in """"{root}""""
+INFO[0000] Deleting cluster 'cht-e2e'                   
+##[error]Process completed with exit code 1.
+
+Root Cause: Docker tried to pull an image with a tag that doesn’t exist on Docker Hub.  
+This commonly happens if:
+- The tag was mistyped  
+- The image hasn't been pushed yet  
+- The image is private and inaccessible
+
+Suggested Fix:  
+- **Verify the image tag** exists on Docker Hub  
+- If it’s dynamically generated, confirm that it was built and pushed beforehand  
+- If it’s a private repo, make sure you're authenticated before pulling  
+- Consider adding a fallback image/tag or validation check in the workflow","Failure Log:
+Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+  1) """"before all"""" hook: beforeAll in """"{root}""""
+INFO[0000] Deleting cluster 'cht-e2e'                   
+##[error]Process completed with exit code 1.
+
+Root Cause: Docker build failed due to a non-existent image tag in DockerHub.
+
+Suggested Fix:  
+Ensure that the Docker image `medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888` exists.  
+If it doesn't:
+- Build and push the required image version  
+- Or update the Docker tag in your workflow to a valid one
+
+---
+
+Failure Log:
+##[group]Run npm ci  
+npm ci  
+shell: /usr/bin/bash -e {0}  
+##[endgroup]  
+npm ERR! code ERESOLVE  
+npm ERR! ERESOLVE could not resolve  
+While resolving: ttf-loader@1.0.2  
+Found: file-loader@4.3.0  
+Could not resolve dependency:  
+peer file-loader@""^1.1.6"" from ttf-loader@1.0.2  
+##[error]Process completed with exit code 1.
+
+Root Cause: NPM install failed due to a version conflict between `file-loader` and `ttf-loader`.
+
+Suggested Fix:  
+Use:
+```bash
+npm install --legacy-peer-deps","Failure Log:
+Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown  
+##[error]Process completed with exit code 1.
+
+Root Cause:  
+Docker build failed due to a non-existent image tag in DockerHub.
+
+Suggested Fix:  
+? Ensure the image name and tag are spelled correctly  
+? Push the required tag to DockerHub before referencing it
+
+---
+
+Failure Log:
+Run python script.py  
+Traceback (most recent call last):  
+  File ""script.py"", line 5, in <module>  
+    import nonexistent_module  
+ModuleNotFoundError: No module named 'nonexistent_module'  
+Error: Process completed with exit code 1.
+
+Root Cause:  
+Python script imports a module that isn’t installed.
+
+Suggested Fix:  
+Add missing module to `requirements.txt` and run:
+
+```bash
+pip install -r requirements.txt  "
+"Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found
+0 passing (35s)
+1 failing
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded
+##[error]Process completed with exit code 1.","API endpoint returned a 404, likely because the route isn't available or service isn't running.",Verify the API route is deployed correctly and the test environment is fully initialized.,,,,"Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded
+##[error]Process completed with exit code 1.","Failure Log:
+Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found
+0 passing (35s)
+1 failing
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded
+##[error]Process completed with exit code 1.
+
+Root Cause: The test suite tried to interact with a UI element (`.sessionButton`) that never appeared,  
+likely because the backend API route `/public/recipe/multitenancy/tenant/v2` returned 404 —  
+meaning the service wasn't running or the endpoint was unavailable.
+
+Suggested Fix:
+- Make sure the SuperTokens backend is running and the route `/multitenancy/tenant/v2` is correctly deployed  
+- Ensure the environment is fully initialized before running the test (e.g., use `wait-on` or similar tools)  
+- Add retry logic or an explicit wait to give the server enough time to become ready","Failure Log:
+Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found  
+0 passing (35s)  
+1 failing  
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded  
+##[error]Process completed with exit code 1.
+
+Root Cause: The application failed to retrieve a resource from an API endpoint, returning 404 (Not Found).  
+This likely indicates the test server wasn't fully initialized or the route wasn’t available yet.  
+The UI test also failed because the `.sessionButton` selector never appeared — possibly due to the backend issue.
+
+Suggested Fix:  
+- Ensure the backend server is fully up before starting UI tests  
+- Add retries or waits to confirm the service is healthy  
+- Check the test environment for correct API deployment
+
+---
+
+Failure Log:
+##[group]Run npm ci  
+npm ci  
+shell: /usr/bin/bash -e {0}  
+##[endgroup]  
+npm ERR! code ERESOLVE  
+npm ERR! ERESOLVE could not resolve  
+While resolving: ttf-loader@1.0.2  
+Found: file-loader@4.3.0  
+Could not resolve dependency:  
+peer file-loader@""^1.1.6"" from ttf-loader@1.0.2  
+##[error]Process completed with exit code 1.
+
+Root Cause: NPM install failed due to a version conflict between `file-loader` and `ttf-loader`.
+
+Suggested Fix:  
+Run:
+```bash
+npm install --legacy-peer-deps","Failure Log:
+Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found  
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded  
+##[error]Process completed with exit code 1.
+
+Root Cause:  
+The backend API returned a 404 — the route may not be deployed or the backend wasn’t initialized in time.  
+The frontend test timed out waiting for a DOM element that never appeared.
+
+Suggested Fix:  
+? Ensure the backend is fully deployed and reachable before running UI tests  
+? Add wait/retry logic or check for service health before test execution"
+"Running command audit...
+â“˜ Checking if the config file is fine... OK
+â¨‰ 1) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+â¨‰ 2) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+â¨‰ We found 6 errors related with the project integrity.
+##[error]Process completed with exit code 1.",Audit failed due to broken external links in documentation or exercise files.,Replace or remove outdated or broken URLs in the content.,,,,"We found 6 errors related with the project integrity.
+##[error]Process completed with exit code 1.","Failure Log:
+Running command audit...
+? Checking if the config file is fine... OK
+? 1) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+? 2) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+? We found 6 errors related with the project integrity.
+##[error]Process completed with exit code 1.
+
+Root Cause: The integrity audit failed due to broken external links — likely in Markdown files, documentation, or exercise materials.
+
+Suggested Fix:
+- Check the URLs flagged as broken and remove or update them  
+- If the links are valid but temporarily down, consider using a retry or ignore list in the audit tool  
+- Use tools like [`markdown-link-check`](https://www.npmjs.com/package/markdown-link-check) or similar with allowlist support","Failure Log:
+Running command audit...
+? Checking if the config file is fine... OK
+? 1) Broken link: https://medium.com/poka-techblog/simplify-your-javascript  
+? 2) Broken link: https://medium.com/poka-techblog/simplify-your-javascript  
+? We found 6 errors related with the project integrity.  
+##[error]Process completed with exit code 1.
+
+Root Cause: Audit failed due to broken external links in documentation or exercise files.
+
+Suggested Fix:  
+Replace or remove outdated or broken URLs in the content.
+
+---
+
+Failure Log:
+##[group]Run npm ci  
+npm ci  
+shell: /usr/bin/bash -e {0}  
+##[endgroup]  
+npm ERR! code ERESOLVE  
+npm ERR! ERESOLVE could not resolve  
+While resolving: ttf-loader@1.0.2  
+Found: file-loader@4.3.0  
+Could not resolve dependency:  
+peer file-loader@""^1.1.6"" from ttf-loader@1.0.2  
+##[error]Process completed with exit code 1.
+
+Root Cause: NPM install failed due to a version conflict between `file-loader` and `ttf-loader`.
+
+Suggested Fix:  
+Run:
+```bash
+npm install --legacy-peer-deps","Failure Log:
+Running command audit...
+? Checking if the config file is fine... OK  
+? 1) Broken link: https://medium.com/poka-techblog/simplify-your-javascript  
+? 2) Broken link: https://medium.com/poka-techblog/simplify-your-javascript  
+? We found 6 errors related with the project integrity.  
+##[error]Process completed with exit code 1.
+
+Root Cause:  
+The audit tool found broken external links in your project files or documentation.
+
+Suggested Fix:  
+? Replace or remove the broken links.  
+? Consider automating link checks using link checkers before CI runs."
