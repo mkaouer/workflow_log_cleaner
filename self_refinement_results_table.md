@@ -42,16 +42,18 @@
 | Explanation 8 | 5                 | Correctly identifies the conflict and provides reasonable ways to resolve it.                                  | 5               | Highly relevant to resolving the dependency conflict in npm.                          | 4                       | The explanation could go deeper into advanced npm conflict resolution techniques.                                         | 5             | Clear and concise, breaking down the conflict resolution steps.               | 5                | Well-organized and properly formatted for easy reading.                      |
 | Explanation 9 | 5                 | The explanation correctly identifies the Node.js version mismatch and provides useful steps for upgrading.    | 5               | Directly addresses the issue of upgrading Node.js to meet expose-loader's requirements. | 4                       | While it provides a good solution, additional tools or methods for managing Node.js versions could have been explored.   | 5             | Very clear and straightforward.                                               | 5                | Well-formatted and structured with precise steps for upgrading Node.js.      |
 
+## Self-Refinement Results for Llama 70B
 
-## Self-Refinement Results for GPT-4 and Llama 70B
+| Metric              | Average  |
+|---------------------|----------|
+| Correctness         | 4.78     |
+| Relevance           | 5.00     |
+| Depth of Analysis   | 4.11     |
+| Clarity             | 5.00     |
+| Formatting          | 4.89     |
 
-| Metric                     | GPT-4 | Llama 70B |
-|----------------------------|-------|-----------|
-| Correctness Score (1-5)    | 4.4   | 4.3       |
-| Relevance Score (1-5)      | 4.5   | 4.4       |
-| Depth of Analysis (1-5)    | 4.3   | 4.2       |
-| Clarity Score (1-5)        | 4.3   | 4.1       |
-| Formatting Score (1-5)     | 4.4   | 4.2       |
-| Response Time (ms)         | 270   | 290       |
-| Number of Actionable Steps | 5     | 5         |
+
+
+## Self-Refinement Results for GPT-4 
+
 
