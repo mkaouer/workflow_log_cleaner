@@ -74,9 +74,8 @@
 | **Formatting**        | 0.49            | Llama70b scores 0.49 points higher than GPT-4 in Formatting.                   |
 
 
-## Reasoning
 
-# Llama70b vs GPT-4 Comparison
+# Reasoning Llama70b vs GPT-4 Comparison
 
 ## Llama70b Advantages
 - **Correctness, Relevance, Depth, Clarity, Formatting**: Llama70b outperforms GPT-4 in all metrics, particularly in **Clarity (0.60)**. It shows stronger, more detailed, and well-organized answers.
