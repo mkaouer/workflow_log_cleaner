@@ -1,0 +1,492 @@
+error,category,explanation,fix
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency/Environment Errors,NPM install failed due to version conflict between dependencies.,Run npm install with --legacy-peer-deps or align dependency versions.
+"> eslint-plugin-eslint-plugin@6.0.0 test
+> nyc --all --check-coverage --include lib mocha tests --recursive
+
+ Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.
+ Instead change require to dynamic import() or update project to ESM modules.
+##[error]Process completed with exit code 1.",Script/Step Failures,"CommonJS require() used on an ES module, causing incompatibility.",Use import() or migrate to ES modules.
+"Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+##[error]Process completed with exit code 1.",Docker/Build Failures,Docker build failed due to a non-existent image tag.,Verify the image and tag exist or rebuild and push it correctly.
+"Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found
+0 passing (35s)
+1 failing
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded
+##[error]Process completed with exit code 1.",API/Network Errors,API endpoint returned a 404 error due to missing deployment or misconfigured route.,Verify the API route and ensure it's deployed correctly.
+"Running command audit...
+â¨‰ Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+â¨‰ We found errors related to the project integrity.
+##[error]Process completed with exit code 1.",HTML/Content Validation Errors,Audit failed due to broken external links in documentation.,Replace or remove outdated or broken URLs in the documentation.
+Error: .github#L1 a step cannot have both the `uses` and `run` keys,YAML Syntax / Workflow Definition Error,"This error comes from a malformed workflow step in your GitHub Actions YAML file — specifically at line 1 (as indicated by #L1). In a single step, you can either:
+
+Use a predefined GitHub Action with the uses key
+OR
+
+Execute a custom shell command with the run key
+
+You cannot combine both in one step.","Split this into two separate steps:
+
+Fixed version:
+
+yaml
+
+- name: Set up Node.js
+  uses: actions/setup-node@v3
+
+- name: Install dependencies
+  run: npm install"
+Invalid workflow file: .github/worflows/broken-action-2.yml#L11 You have an error in your yaml syntax on line 11,YAML Syntax Error,"This means there’s a YAML syntax error on line 11 of your workflow file. YAML is whitespace- and indentation-sensitive, so even a small mistake can break the file. Common issues include:
+
+Mixing tabs and spaces
+
+Missing colons :
+
+Unquoted strings with special characters
+
+Incorrect indentation under jobs or steps","Steps to fix it:
+Open .github/workflows/broken-action-2.yml
+
+Go to line 11
+
+Check for:
+
+Missing colon : after a key
+
+Misaligned indentation
+
+Special characters (like : or #) in strings not wrapped in quotes"
+"/__w/_temp/36dfc03e-56ed-43fa-9019-85d8b151f42a.sh: 2: python3: not found
+Running python here. Error: Process completed with exit code 127.",Environment Configuration Error,"The workflow tried to run python3, but the command wasn't found in the environment. This usually means:
+
+The GitHub Actions runner doesn't have Python 3 installed
+or
+
+You’re using a Docker container or environment that doesn’t include Python
+
+Exit code 127 specifically means: “command not found”.","You’re going to want to look into what software packages the docker image referenced on in the image: key has. Does rocker/r-base image have Python?
+
+If not, you may need to look for a Docker image to use that has python. We’ve used one in a previous example that you could borrow."
+"Run npm test
+> my-app@1.0.0 test
+> jest
+
+No tests found, exiting with code 1
+Run failed
+##[error]Process completed with exit code 1.",Test Execution Error,"The error message is not clear enough but probably Jest didn’t find any test files to run. This could happen due to:
+
+Wrong test file naming
+
+Misconfigured jest.config.js
+
+Tests accidentally excluded (e.g., by .gitignore or missing in commit)","If your GitHub Actions workflow fails without clear error messages, here's a short answer to help you troubleshoot:
+
+Check Logs:
+Go to the ""Actions"" tab, select the failed workflow, and review the logs for error messages or step failures.
+Enable Debug Logging:
+Add ACTIONS_RUNNER_DEBUG=true and ACTIONS_STEP_DEBUG=true to your workflow's environment variables for detailed logs.
+Look at Recent Changes:
+If you've made recent changes, they could be causing the issue. Try reverting or re-testing those changes.
+Retry the Workflow:
+Sometimes, workflows fail due to temporary issues. Try running the workflow again to see if it resolves the problem."
+"Run npm install
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! 
+npm ERR! While resolving: @typescript-eslint/eslint-plugin@4.28.2
+npm ERR! Found: eslint@7.32.0
+npm ERR! 
+npm ERR! Could not resolve dependency:
+npm ERR! peer eslint@""^5.0.0 || ^6.0.0"" from @typescript-eslint/eslint-plugin@4.28.2
+npm ERR! node_modules/@typescript-eslint/eslint-plugin
+npm ERR!   dev @typescript-eslint/eslint-plugin@""^4.28.2"" from the root project
+npm ERR! 
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force, or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+npm ERR! 
+npm ERR! See /home/runner/.npm/eresolve-report.txt for a full report.
+Error: Process completed with exit code 1.",Dependency Resolution Error,"This error occurs due to a version conflict between @typescript-eslint/eslint-plugin and eslint. The plugin requires eslint version 5 or 6, but version 7.32.0 is installed.","Update @typescript-eslint/eslint-plugin to a version compatible with eslint@7.32.0, or adjust the eslint version to match the plugin's peer dependency requirements."
+"Run node app.js
+internal/fs/utils.js:230
+  throw err;
+  ^
+
+Error: ENOENT: no such file or directory, open '/home/runner/work/my-repo/my-repo/.env'
+    at Object.openSync (fs.js:476:3)
+    at Object.readFileSync (fs.js:377:35)
+    at Object.<anonymous> (/home/runner/work/my-repo/my-repo/app.js:10:15)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47 {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/home/runner/work/my-repo/my-repo/.env'
+}
+Error: ENOENT: no such file or directory, open '/home/runner/work/my-repo/my-repo/.env'",File Not Found Error,"The application attempts to read a .env file that doesn't exist in the repository, leading to a ""No such file or directory"" error.",Ensure that the .env file is present in the repository or modify the application to handle the absence of the .env file gracefully.
+"Run git push origin HEAD:refs/heads/main
+remote: Permission to user/repo.git denied to github-actions[bot].
+fatal: unable to access 'https://github.com/user/repo.git/': The requested URL returned error: 403
+Error: Process completed with exit code 128.",Git Permission Error,"The GitHub Actions bot lacks the necessary permissions to push changes to the repository, resulting in a 403 Forbidden error.",Use a Personal Access Token (PAT) with appropriate permissions instead of the default GITHUB_TOKEN to authenticate Git operations.
+"Run docker build -t my-image .
+Sending build context to Docker daemon  2.048kB
+Step 1/5 : FROM node:14
+14: Pulling from library/node
+no matching manifest for linux/amd64 in the manifest list entries
+Error: Process completed with exit code 1.",Docker Image Compatibility Error,"The specified Docker image (node:14) doesn't have a manifest compatible with the linux/amd64 architecture, causing the build to fail.","Specify a valid image tag that supports the linux/amd64 architecture, or use a different base image compatible with the target architecture."
+"Run python script.py
+Traceback (most recent call last):
+  File ""script.py"", line 5, in <module>
+    import nonexistent_module
+ModuleNotFoundError: No module named 'nonexistent_module'
+Error: Process completed with exit code 1.",Module Import Error,"The Python script attempts to import a module that isn't installed in the environment, leading to a ModuleNotFoundError.",Ensure that all required Python modules are listed in the requirements.txt file and install them using pip install -r requirements.txt before running the script.
+"The workflow is not valid. .github/workflows/deploy.yml (Line: 15, Col: 9): mapping values are not allowed in this context. Error: YAML syntax error: mapping values are not allowed in this context",YAML Syntax Error,"This error indicates a syntax issue in the YAML file, often due to incorrect indentation or formatting.",Review the workflow file for proper YAML syntax. Utilize YAML validators to identify and correct formatting issues.
+"remote: Permission to user/repo.git denied to github-actions[bot].
+fatal: unable to access 'https://github.com/user/repo.git/': The requested URL returned error: 403. Error: Permission denied to access repository",Git Permission Error,The GitHub Actions runner lacks the necessary permissions to access the repository.,"Ensure that the workflow has the correct permissions set. If accessing another repository, use a Personal Access Token (PAT) with appropriate scopes."
+"Traceback (most recent call last):
+  File ""script.py"", line 1, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'. Error: ModuleNotFoundError: No module named 'requests'",Module Import Error,"The Python script requires the requests module, which is not installed in the environment.","Add a step in the workflow to install the required dependencies, typically using pip install -r requirements.txt."
+Error: Killed,Resource Limit Exceeded Error,"The process was terminated due to exceeding memory limits, often occurring when multiple workflows run concurrently.","Optimize the workflow to use less memory, or configure concurrency settings to limit simultaneous runs."
+"#15 [internal] load metadata for docker.io/medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888
+#15 ERROR: failed to resolve reference: pull access denied for medicmobile/cht-haproxy, repository does not exist or may require authorization: 
+server message: insufficient_scope: authorization failed
+
+------
+ > [internal] load metadata for docker.io/medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888:
+------
+failed to solve with frontend dockerfile.v0: failed to create LLB definition: failed to authorize: rpc error: code = Unknown desc = 
+failed to fetch anonymous token: unexpected status: 401 Unauthorized
+Error: buildx failed with: ERROR: failed to solve: failed to fetch anonymous token: unexpected status: 401 Unauthorized
+##[error]Process completed with exit code 1.",Docker Authentication Error,"This error occurs because GitHub Actions cannot pull the Docker image medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 from Docker Hub. The image either:
+
+Does not exist
+
+Is private and requires authentication
+
+Was mistyped or built locally but never pushed","Here are the steps to resolve it:
+
+Check the image name and tag
+
+Make sure the tag is correct. If it’s dynamically generated (like one based on a branch or hash), verify the build actually produced it.
+
+Make the image public (if intended)
+
+On Docker Hub, go to the repository settings and switch it to public if it was meant to be public.
+
+Authenticate with Docker Hub (for private images)
+
+Add secrets DOCKER_USERNAME and DOCKER_PASSWORD to your repo
+
+Authenticate before the build:
+
+yaml
+
+- name: Log in to Docker Hub
+  run: echo ""${{ secrets.DOCKER_PASSWORD }}"" | docker login -u ""${{ secrets.DOCKER_USERNAME }}"" --password-stdin
+Push the image if it's missing
+If the image tag is generated in a prior CI step, ensure it’s being built and pushed:
+
+bash
+
+docker build -t medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 .
+docker push medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.913710"
+"##[group]Run npm ci
+npm ci
+shell: /usr/bin/bash -e {0}
+##[endgroup]
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE could not resolve
+npm ERR! While resolving: ttf-loader@1.0.2
+npm ERR! Found: file-loader@4.3.0
+npm ERR! Could not resolve dependency:
+npm ERR! peer file-loader@""^1.1.6"" from ttf-loader@1.0.2
+npm ERR! Fix the upstream dependency conflict, or retry with --legacy-peer-deps.
+##[error]Process completed with exit code 1.",Dependency Resolution Error,NPM install failed due to a version conflict between file-loader and ttf-loader.,Run npm install with --legacy-peer-deps or align the versions manually in package.json.
+"> eslint-plugin-eslint-plugin@6.0.0 test
+> nyc --all --check-coverage --include lib mocha tests --recursive
+
+ Error [ERR_REQUIRE_ESM]: require() of ES Module not supported.
+ Instead change require to dynamic import() or update project to ESM modules.
+##[error]Process completed with exit code 1.",Module System Error,"CommonJS require() used on an ES module, which is not supported.",Use dynamic import() or migrate the project to ES module format.
+"Error response from daemon: manifest for medicmobile/cht-haproxy:4.7.0-dependabot-npm-and-yarn-webapp-angular-b1a866d120.9137105888 not found: manifest unknown: manifest unknown
+  1) """"before all"""" hook: beforeAll in """"{root}""""
+INFO[0000] Deleting cluster 'cht-e2e'                   
+##[error]Process completed with exit code 1.",Docker Image Not Found Error,Docker build failed due to a non-existent image tag in DockerHub.,Ensure the image and tag exist or build and push the required version before using it.
+"Error: SuperTokens core threw an error for a GET request to path: '/public/recipe/multitenancy/tenant/v2' with status code: 404 and message: Not found
+0 passing (35s)
+1 failing
+TimeoutError: waiting for selector `.sessionButton` failed: timeout 30000ms exceeded
+##[error]Process completed with exit code 1.",API Endpoint Not Found Error,"API endpoint returned a 404, likely because the route isn't available or service isn't running.",Verify the API route is deployed correctly and the test environment is fully initialized.
+"Running command audit...
+â“˜ Checking if the config file is fine... OK
+â¨‰ 1) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+â¨‰ 2) Broken link: https://medium.com/poka-techblog/simplify-your-javascript
+â¨‰ We found 6 errors related with the project integrity.
+##[error]Process completed with exit code 1.",Link Validation Error,Audit failed due to broken external links in documentation or exercise files.,Replace or remove outdated or broken URLs in the content.
+Run . scl_source enable devtoolset-7 || true ... Error: Process completed with exit code 1.,Build/Test Failures,BioDynaMo system test failed due to environment setup issue in devtoolset.,Ensure devtoolset and MPI modules load correctly before running demos.
+"::error Filename $filename doesn't match possible files"" && exit 1 ; done",File Validation Errors,Filename validation failed; a file didn't match the required pattern.,Ensure filenames match the workflowâ€™s expected pattern.
+Run dotnet restore ... error MSB3202: The project file 'UnitTest.csproj' was not found.,.NET Build Errors,The specified UnitTest.csproj file could not be found during the restore process.,Check that the file path exists and is included in the repository.
+To https://github.com/... (fetch first) ... Updates were rejected because the remote contains work that you do not have locally.,Git / Merge Conflicts,Git push failed because local branch is behind remote.,Perform git pull --rebase before pushing changes.
+Download action repository 'nrwl/nx-set-shas@v4' ... Workflow Id not provided. Using workflow 'undefined',Workflow Configuration Errors,"A workflow variable was missing, causing nx-set-shas to fail.",Set required workflow_id or related input in the YAML file.
+remote: Your push was rejected because it contains binary files.,Git LFS Errors,Push rejected because binary files weren't tracked via Git LFS.,Configure Git LFS and track binary files before pushing.
+Run npm publish ... npm error code ENEEDAUTH ... You need to authorize this machine using npm adduser,NPM Authentication Errors,npm publish failed because no valid authentication token was provided.,Add NODE_AUTH_TOKEN secret to GitHub Actions.
+Error: failed to run script step ... Executing the custom container implementation failed.,Container Execution Errors,Runner failed to execute a script in a custom container environment.,Check container permissions and runner configuration.
+##[debug]Evaluating condition for step: 'Fail on purpose'... Run exit 1,Step Initialization Error,Step failed immediately due to an intentional exit 1 command.,Wrap the command with continue-on-error if intentional.
+##[debug]Overwrite 'working-directory' ... Error: Executing the custom container implementation failed.,Container / Script Execution Failure,Script execution failed inside container during workflow step.,Validate container setup and permissions.
+##[debug]System.Exception: Executing the custom container implementation failed ... Finishing: Fail on purpose,Runner Internal Exception,Internal runner exception while executing container hook script.,Inspect hook scripts and update runner.
+"Run npm install
+npm ERR! code E404
+npm ERR! 404 Not Found: some-package@1.0.0",NPM / Package Registry Errors,"The npm install command failed because the package some-package@1.0.0 could not be found in the npm registry, likely due to a typo, missing version, or incorrect registry configuration.",Verify that some-package@1.0.0 exists in the registry and that your npm registry URL and authentication (if using private packages) are correctly configured before rerunning npm install.
+"##[group]Run install.packages('remotes')
+install.packages('remotes')
+saveRDS(remotes::dev_package_deps(dependencies = TRUE), ""../.github/depends.Rds"", version = 2)
+writeLines(sprintf(""R-%i.%i"", getRversion()$major, getRversion()$minor), ""../.github/R-version"")
+shell: /usr/local/bin/Rscript {0}
+env:
+  R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+  RSPM: https://packagemanager.rstudio.com/cran/__linux__/focal/latest
+  R_LIBS_USER: /home/runner/work/_temp/Library
+  TZ: UTC
+  NOT_CRAN: true
+##[endgroup]
+Installing package into ‘/home/runner/work/_temp/Library’
+(as ‘lib’ is unspecified)
+trying URL 'https://packagemanager.rstudio.com/cran/__linux__/focal/latest/src/contrib/remotes_2.2.0.tar.gz'
+Content type 'binary/octet-stream' length 385906 bytes (376 KB)
+==================================================
+downloaded 376 KB
+
+* installing *binary* package ‘remotes’ ...
+* DONE (remotes)
+
+The downloaded source packages are in
+‘/tmp/RtmpnMfdtp/downloaded_packages’
+##[group]Run actions/cache@v1
+with:
+  path: /home/runner/work/_temp/Library
+  key: Linux-287c850eb370edd647ed85b6fac18cbaee02effa7d01b981304dce84a452b22c-1-
+  restore-keys: Linux--1-
+env:
+  R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+  RSPM: https://packagemanager.rstudio.com/cran/__linux__/focal/latest
+  R_LIBS_USER: /home/runner/work/_temp/Library
+  TZ: UTC
+  NOT_CRAN: true
+##[endgroup]
+Cache not found for input keys: Linux-287c850eb370edd647ed85b6fac18cbaee02effa7d01b981304dce84a452b22c-1-, Linux--1-.
+##[group]Run while read -r cmd
+while read -r cmd
+do
+  eval sudo $cmd
+done < <(Rscript -e 'cat(remotes::system_requirements(""ubuntu"", ""20.04""), sep = ""\n"")')
+shell: /usr/bin/bash -e {0}
+env:
+  R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
+  RSPM: https://packagemanager.rstudio.com/cran/__linux__/focal/latest
+  R_LIBS_USER: /home/runner/work/_temp/Library
+  TZ: UTC
+  NOT_CRAN: true
+##[endgroup]
+usage: sudo -h | -K | -k | -V
+usage: sudo -v [-AknS] [-g group] [-h host] [-p prompt] [-u user]
+usage: sudo -l [-AknS] [-g group] [-h host] [-p prompt] [-U user] [-u user]
+            [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C num] [-g group] [-h host] [-p
+            prompt] [-T timeout] [-u user] file ...
+##[error]Process completed with exit code 1.",R / System Requirements Installation Error,"The GitHub Actions job failed because the sudo command in the R system requirements installation step was invoked without valid arguments or permissions, causing it to exit with code 1","Remove or modify the use of sudo in the workflow if it’s unnecessary for the runner environment, or ensure the job runs with sufficient privileges (e.g., on a Linux runner with sudo access) before executing the R system requirements installation step."
+"name: Send Email on: push: branches: - main jobs: build: runs-on: ubuntu-latest steps: - name: Set up Node.js uses: actions/setup-node@v3 with: node-version: '20' - name: Checkout code uses: actions/checkout@v3 - name: Install dependencies run: npm install - name: Install nodemailer run: npm install nodemailer - name: Print Environment Variables run: echo $SENDGRID_API_KEY - name: Send email run: | echo ""const nodemailer = require('nodemailer');"" > sendEmail.js echo """" >> sendEmail.js echo ""const transporter = nodemailer.createTransport({"" >> sendEmail.js echo "" host: 'smtp.sendgrid.net',"" >> sendEmail.js echo "" port: 587,"" >> sendEmail.js echo "" secure: false,"" >> sendEmail.js echo "" auth: {"" >> sendEmail.js echo "" user: 'apikey',"" >> sendEmail.js echo "" pass: process.env.SENDGRID_API_KEY"" >> sendEmail.js echo "" }"" >> sendEmail.js echo ""});"" >> sendEmail.js echo """" >> sendEmail.js echo ""const mailOptions = {"" >> sendEmail.js echo "" from: 'test@example.com',"" >> sendEmail.js echo "" to: 'test@example.com',"" >> sendEmail.js echo "" subject: 'Sending with SendGrid is Fun',"" >> sendEmail.js echo "" text: 'and easy to do anywhere, even with Node.js',"" >> sendEmail.js echo "" html: '<strong>and easy to do anywhere, even with Node.js</strong>'"" >> sendEmail.js echo ""};"" >> sendEmail.js echo """" >> sendEmail.js echo ""transporter.sendMail(mailOptions, (error, info) => {"" >> sendEmail.js echo "" if (error) {"" >> sendEmail.js echo "" console.error('Error sending email:', error);"" >> sendEmail.js echo "" process.exit(1);"" >> sendEmail.js echo "" } else {"" >> sendEmail.js echo "" console.log('Email sent:', info.messageId);"" >> sendEmail.js echo "" process.exit(0);"" >> sendEmail.js echo "" }"" >> sendEmail.js echo ""});"" >> sendEmail.js - name: Run sendEmail.js run: node sendEmail.js Error: Process completed with exit code 2. ",Node.js / Runtime Execution Error,"The workflow failed because the sendEmail.js Node script exited with code 2, indicating a runtime error — most likely caused by a missing or invalid SENDGRID_API_KEY environment variable or another unhandled error inside the email-sending script.","Ensure that the SENDGRID_API_KEY is properly defined as a GitHub secret and passed to the step using:env:
+  SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}"
+Run python headline-scraper.py python: can't open file * /home/runner/work/github-actions-error/github-actions-error/headline-scraper.py': (Errno 21 No such file or directory),File Path / Missing Script Errors,"The Python step failed because the workflow attempted to run headline-scraper.py, but the file does not exist at the specified path in the GitHub Actions workspace","Verify that headline-scraper.py is committed to the repository and located in the correct directory, or update the workflow’s run command to point to the actual path of the script"
+"Run python scraper.py
+Traceback (most recent call last):
+File ""/home/runner/work/github-actions-error/github-actions-error/scraper.py"", line 3, in <module>
+import pandas as pd
+ModuleNotFoundError: No module named 'pandas'",Python / Missing Dependency Errors,"The workflow failed because the Python script scraper.py tried to import the pandas library, which was not installed in the GitHub Actions environment","Add a dependency installation step before running the script, such as:- name: Install Python dependencies
+  run: pip install pandas                                                                                                                                       or include pandas in your requirements.txt and install it  with - run: pip install -r requirements.txt"
+"Describe the bug Sync Workflow is failing on archive files with zip error. To Reproduce Steps to reproduce the behavior: Manually run Sync Workflow in Github Actions. Expected behavior Workouts to be uploaded to Garmin Logs From ""archive files"": ... Preparing to unpack .../unzip_6.0-26+deb11u1_amd64.deb ... Unpacking unzip (6.0-26+deb11u1) ... Selecting previously unselected package zip. Preparing to unpack .../archives/zip_3.0-12_amd64.deb ... Unpacking zip (3.0-12) ... Setting up unzip (6.0-26+deb11u1) ... Setting up zip (3.0-12) ... zip error: Nothing to do! (try: zip -r -j output.zip . -i /app/output) Error: Process completed with exit code 12.",ZIP / Archive Command Errors,"The GitHub Actions workflow failed because the zip command was executed without any matching files to include, resulting in the message “Nothing to do!” and exit code 12","Ensure that the directory or files you intend to archive actually exist before running the zip command — for example, add a check step like:ls /app/output     to verify files are present, or update your workflow to only run the zip command when the target files are available"
+"Error: Failed to create canister 'provision'.
+Caused by: No wallet configured for combination of identity 'actions' and network 'ic'
+Error: Process completed with exit code 255.",Deployment / Configuration Errors (DFX / Internet Computer),The GitHub Actions job failed because the DFX deployment command couldn’t create the provision canister — no wallet was configured for the identity actions on the target ic network,"Configure a wallet for the actions identity before deployment by running:dfx identity use actions
+dfx identity get-wallet --network ic       and, if necessary, deploy or link a new wallet with:dfx wallet --network ic create   then store the correct identity and wallet credentials as GitHub Secrets for your workflow to use during deployment"
+"Run mvn dependency:list -DincludeArtifactIds=squirrel \
+  -s .maven/settings.xml \
+  -DskipMunitTests \
+  -Dclient.id=""$CLIENT_ID"" \
+  -Dclient.secret=""$CLIENT_SECRET"" | grep ""::squirrel:"" | grep -Eo ""\d+[.]\d+[.]\d+""
+shell: /usr/bin/bash -e {0}
+env:
+  CLIENT_ID: ***
+  CLIENT_SECRET: ***
+  JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.12-7/x64
+  JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.12-7/x64
+
+Error: Process completed with exit code 1.",Maven / Dependency Retrieval Errors,"The workflow failed because the mvn dependency:list command couldn’t retrieve or match the squirrel dependency version, causing the grep command to return no output and exit with status code 1","Verify that the squirrel dependency is correctly declared in your pom.xml and that Maven has access to the proper repository credentials.
+If the dependency exists, adjust the grep pattern or ensure the command outputs the expected dependency string before filtering"
+"Run HubSpot/hubspot-cms-deploy-action@v1.7
+Run actions/setup-node@v1
+/opt/hostedtoolcache/node/20.16.0/x64/bin/node --version
+v20.16.0
+/opt/hostedtoolcache/node/20.16.0/x64/bin/npm --version
+10.8.1
+
+Run npx --yes --package=@hubspot/cli@latest --call='hs upload [[FROM_DESTINATION_DIR]] [[TO_DESTINATION_DIR]] --use-env'
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+/usr/bin/env: ‘node --no-deprecation’: No such file or directory
+/usr/bin/env: use -[v]S to pass options in shebang lines
+Error: Process completed with exit code 127.",Node.js / Environment Configuration Errors,"The workflow failed because the system attempted to execute node --no-deprecation using /usr/bin/env, but the interpreter couldn’t find a matching binary, leading to an exit code 127 (“command not found”)","Remove or correct the invalid Node.js invocation flag in the HubSpot CLI shebang or script.
+You can patch the action or script to call Node directly (e.g., #!/usr/bin/env node instead of #!/usr/bin/env node --no-deprecation), or override the shebang handling by updating the action dependency to a version compatible with Node 20+"
+"Run docker build -t ""hanapbh-server:test"" ./server \
+/home/runner/work/_temp/ddd7ff37-339a-4b0c-aa83-4bb504d85192.sh: line 4: --build-arg: command not found
+
+#0 building with ""default"" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 842B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:20-slim
+#2 DONE 0.9s
+
+#3 [auth] library/node:pull token for registry-1.docker.io
+#3 DONE 0.0s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 79B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 289.31kB done
+#5 DONE 0.0s
+
+#6 [base 1/4] FROM docker.io/library/node:20-slim@sha256:a22f79e64de59efd3533828aecc9817bfdc1cd37dde598aa27d6065e7b1f0abc
+#6 resolve docker.io/library/node:20-slim@sha256:a22f79e64de59efd3533828aecc9817bfdc1cd37dde598aa27d6065e7b1f0abc done
+#6 extracting sha256 layers...
+#6 DONE 3.0s
+
+#7 [base 2/4] RUN corepack enable
+#7 DONE 0.2s
+
+#8 [base 3/4] COPY . /app
+#8 DONE 0.0s
+
+#9 [base 4/4] WORKDIR /app
+#9 DONE 0.0s
+
+#10 [prod-deps 1/1] RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
+#10 0.440 ! Corepack is about to download 
+Error: Process completed with exit code 127.",Docker Build / Command Syntax Error,"The Docker build command failed because a malformed argument (--build-arg) was passed outside of the docker build command context, causing the shell to interpret it as a standalone command and return “command not found.”","Ensure that all --build-arg flags are placed inside the Docker build command.
+For example, use:docker build -t ""hanapbh-server:test"" --build-arg NODE_ENV=production ./server   and not:docker build -t ""hanapbh-server:test"" ./server \
+--build-arg NODE_ENV=production       which incorrectly breaks the command across lines."
+"name: Bug Tracker #Controls when the workflow will run on: # Triggers the workflow on push request events push: branches: [ main ] # Allows you to run this workflow manually from the Actions tab (for testing) workflow_dispatch: # A workflow run is made up of one or more jobs that can run sequentially or in parallel jobs: build: # Self Hosted Runner runs-on: windows-latest # Steps for tracker to get activated steps: # Checks-out your repository under BugTracker so the job can find it - uses: actions/checkout@v2 - name: setup python uses: actions/setup-python@v2 with: python-version: 3.8 # Runs main script to look for - name: Run File and collect bug id: response run: | echo Running File... python script.py echo ""${{steps.response.outputs.result}}""",Python Runtime / Script Execution Failure,"The workflow failed because the python script.py command exited with status code 1, indicating that the Python script itself encountered an unhandled exception or runtime error","Inspect the output or add debugging to the Python script (e.g., wrap main code with try/except and print the stack trace).
+You can modify the step to capture detailed errors: - name: Run File and collect bug
+  run: |
+    echo ""Running File...""
+    python -u script.py || exit 1               and include logging in the script like:import traceback
+
+try:
+    # your main code here
+    pass
+except Exception as e:
+    print(""Error:"", e)
+    traceback.print_exc()
+    exit(1)"
+name: Check on re-run outcome if: steps.running.outcome != 'success' run: | echo Re-running status ${{steps.running.outcome}} exit 1,Conditional Step Failure / Manual Exit Code,The workflow step intentionally fails because it checks whether a previous step’s outcome (steps.running.outcome) is not success and then exits with code 1 to signal a failed re-run condition.,"If this failure is unintentional, remove the exit 1 or modify the condition to only fail when necessary.
+For example:if: steps.running.outcome == 'failure'           or use a warning instead of failing:run: echo ""Re-run detected, continuing without failure."""
+"fatal: unable to access 'https://github.com/...': The requested URL returned error: 403
+Error: Process completed with exit code 128.",Git Authentication / Permission Error,The workflow failed because the GitHub Actions bot or token used in the job lacked the necessary repository permissions (typically write access or contents: write) when trying to push or fetch changes over HTTPS,"In your workflow, ensure you provide the right permissions:
+
+permissions:
+  contents: write
+
+
+If you’re using a Personal Access Token (PAT), make sure it has the repo scope and replace ${{ secrets.GITHUB_TOKEN }} with ${{ secrets.PERSONAL_TOKEN }} if needed.
+
+For example:
+
+- name: Push changes
+  run: git push origin main
+  env:
+    GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}"
+"elif [ -f /etc/centos-release ]; then
+    # IPv6 on GitHub Actions is broken, causing random network failures
+    # if a CDN resolves to IPv6.
+    # error: Couldn't find a setup script in /tmp/easy_install-8fl5smm_/numpy-2.2.0.tar.gz
+    # Error: Process completed with exit code 1.
+    pip3 install numpy h5py matplotlib --user",Python Package Installation / Build Error,"The workflow failed during Python package installation because the numpy source distribution didn’t contain a valid setup.py file, preventing easy_install from building the package successfully","Upgrade pip and setuptools before installing dependencies to ensure compatibility with the latest numpy packaging format:
+
+python3 -m pip install --upgrade pip setuptools wheel
+pip install numpy h5py matplotlib --user
+
+
+Alternatively, use binary wheels instead of source builds by specifying:
+
+pip install numpy==<stable-version> --prefer-binary"
+Run npm run test <br> Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/home/runner/work/app/src/index.js',Node.js Module Resolution Error,"
+Tests failed because the entry file path was incorrect or deleted during build.",Verify the path and ensure index.js exists before running tests.
+Run python3 manage.py migrate <br> django.db.utils.OperationalError: no such table: auth_user,Database Migration Error,The database schema was not created before executing migrations.,Run python manage.py migrate --run-syncdb or initialize the database before CI.
+Run mvn package <br> [ERROR] Failed to execute goal on project: Could not resolve dependencies for artifact…,Maven Dependency Resolution,Missing artifact in remote repository or invalid repository URL.,Add a valid repository mirror or check credentials in settings.xml.
+Run pytest <br> E ModuleNotFoundError: No module named 'tests',Python Import Error,The tests module is not in the Python path.,Add PYTHONPATH=. or correct the import statement.
+Run go build <br> go: cannot find main module; see 'go help modules',Go Build Configuration,Go module initialization was skipped.,Run go mod init <name> before build.
+Run dotnet restore <br> error NU1301: Unable to load the service index for source https://api.nuget.org/v3/index.json,Network / NuGet Error,NuGet feed unreachable or blocked in runner environment.,Retry with --disable-parallel or configure proxy in NuGet.config.
+Run docker login <br> Error saving credentials: error storing credentials - err: exit status 1,Docker Credential Store Error,Docker login failed due to missing $HOME/.docker/config.json write access.,Use --password-stdin and grant permissions to the home directory.
+Run terraform plan <br> Error acquiring the state lock: ConditionalCheckFailedException,Terraform Locking Error,Another process holds the Terraform state lock.,Unlock manually with terraform force-unlock <id> or use separate workspaces.
+Run gcloud app deploy <br> ERROR: (gcloud.app.deploy) Permissions denied for App Engine Admin API.,Cloud API Permission Error,The service account used by Actions lacks App Engine Admin role.,Grant the role via gcloud projects add-iam-policy-binding.
+Run gradle build <br> Execution failed for task ':compileJava' > invalid source release: 21,Java Version Mismatch,Gradle used an unsupported JDK version.,Set JAVA_HOME to a matching JDK version in workflow.
+Run npm run lint <br> ESLint: Parsing error: Unexpected token '?',Linting / Syntax Error,Code contains syntax unsupported by configured parser.,Update ESLint parser to support optional chaining or upgrade Node.js.
+Run make test <br> make: *** [all] Error 2,Makefile Build Error,A target command failed within Makefile.,Inspect preceding lines to see the specific command exit code.
+Run bundle install <br> Could not locate Gemfile,Ruby Dependency Error,Gemfile missing or in wrong directory.,Ensure Gemfile is checked out and run bundle from repo root.
+Run yarn install <br> error An unexpected error occurred: EPERM: operation not permitted,File System Permission Error,Yarn cannot write to cache folder in runner.,Set YARN_CACHE_FOLDER to a writable directory.
+"Run npm ci <br> npm ERR! Missing script: ""build""",NPM Script Error,The workflow calls a non-existent npm script.,"Add a ""build"" entry in package.json."
+Run pytest <br> AssertionError: expected 200 but got 500,Test Assertion Failure,Application endpoint returned unexpected HTTP status.,Fix API logic or mock external services in tests.
+Run aws s3 sync <br> fatal error: An error occurred (AccessDenied),AWS Permission Error,AWS credentials lack S3 write access.,Attach policy AmazonS3FullAccess to the IAM user or role.
+Run clang main.c <br> fatal error: stdio.h: No such file or directory,C Compiler Toolchain Error,Missing build-essential packages on runner.,Install sudo apt install build-essential.
+Run rsync -av src/ dest/ <br> rsync: command not found,Missing System Dependency,Runner image lacks rsync.,Add sudo apt install rsync before usage.
+Run npm audit <br> Error: Audit endpoint requires authentication,NPM Authentication Error,Private registry requires auth token.,Add .npmrc with //registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}.
+"Run docker compose up <br> ERROR: Version in ""./docker-compose.yml"" is unsupported",Docker Compose Version Error,Compose file uses syntax unsupported by installed Docker version.,Upgrade Docker Compose to v2+ or update the file version.
+Run phpunit <br> PHP Fatal error: Uncaught Error: Class 'PDO' not found,PHP Extension Missing,pdo_mysql extension not enabled in CI container.,Install with docker-php-ext-install pdo_mysql.
+Run helm upgrade <br> Error: Kubernetes cluster unreachable: no configuration has been provided,Kubernetes Config Error,Missing KUBECONFIG environment variable.,Set KUBECONFIG: ~/.kube/config with proper credentials.
+Run npm run build <br> Error: ENOSPC: no space left on device,Disk Space Error,Runner storage filled during build.,Clean cache or use actions/checkout@v4 with fetch-depth: 1.
+Run gradlew test <br> java.lang.OutOfMemoryError: Java heap space,Memory Overflow Error,Insufficient heap space for tests.,Increase GRADLE_OPTS=-Xmx2G.
+Run pnpm install <br> ERR_PNPM_OUTDATED_LOCKFILE,Package Lock Mismatch,pnpm-lock.yaml is out of sync with package.json.,Run pnpm install --lockfile-only.
+Run pytest <br> ImportError: cannot import name 'Mapping' from 'collections',Python Version Incompatibility,Old package uses Python 2 syntax under 3.10+.,Upgrade dependency to support Python 3.10+.
+Run npm publish <br> 403 Forbidden – You do not have permission to publish this package.,NPM Permission Error,NPM token lacks publish rights.,Use maintainer’s token with automation scope.
+Run ansible-playbook deploy.yml <br> ERROR! missing sudo password,Ansible Execution Error,Playbook requires privilege escalation without password provided.,Add --ask-become-pass or configure become: true.
+Run pytest <br> E OSError: [Errno 28] No space left on device,System Resource Error,Temporary directory filled during test output.,Clean /tmp or use TMPDIR on mounted volume.
+Run mvn test <br> Connection refused when connecting to localhost:3306,Service Dependency Error,MySQL container not started before tests.,Add services: block with MySQL in workflow.
+Run flake8 <br> Command 'flake8' not found,Python Linting Error,Flake8 not installed in runner env.,Add pip install flake8 step.
+Run rustc main.rs <br> error[E0425]: cannot find value 'x' in this scope,Rust Compilation Error,Variable used before declaration.,Fix code or initialize variable.
+"Run composer install <br> [Composer\Downloader\TransportException] The ""packagist.org"" file could not be downloaded",Composer Network Error,Network timeout during package fetch.,Retry with --prefer-dist or increase timeout.
+Run pytest <br> E PermissionError: [Errno 13] Permission denied: '/usr/local/lib',Permission Error,Test writes to restricted directory.,Redirect output to /tmp or run with sudo false.
+Run go test <br> FAIL module/package: missing Go sum entry for dependency,Go Dependency Error,go.sum out of date.,Run go mod tidy.
+Run pytest <br> E TypeError: 'NoneType' object is not subscriptable,Code Logic Error,Variable returned None unexpectedly in tests.,Add null checks before indexing.
+Run docker build <br> COPY failed: file not found in build context,Dockerfile Context Error,Missing file path in build context.,Ensure file exists or adjust .dockerignore.
+"Run kubectl apply -f deployment.yaml <br> error: no matches for kind ""Deployment"" in version ""v1beta1""",Kubernetes API Version Error,Deprecated API used.,Update to apps/v1 API.
+Run pytest <br> ValueError: invalid literal for int() with base 10,Runtime Type Error,String could not be converted to int.,Validate inputs before casting.
+Run mvn verify <br> [ERROR] java.lang.NoClassDefFoundError: javax/xml/bind/JAXBContext,Java Module Error,Removed JAXB in Java 11.,Add javax.xml.bind dependency or use Jakarta API.
+Run python3 setup.py install <br> error: invalid command 'bdist_wheel',Python Packaging Error,wheel module missing.,Install pip install wheel.
+Run npm run build <br> ReferenceError: process is not defined,Webpack Config Error,Browser build missing process polyfill.,Add definePlugin polyfill in webpack config.
+Run pytest <br> RecursionError: maximum recursion depth exceeded,Recursion Logic Error,Infinite recursive call in code.,Add base case or limit recursion.
+Run pip install -r requirements.txt <br> ERROR: Could not find a version that satisfies the requirement torch==3.0.0,Dependency Version Error,Requested version does not exist on PyPI.,Use valid torch release from pip index versions torch.
+Run docker push myimage:latest <br> denied: requested access to the resource is denied,Docker Registry Auth Error,Unauthorized push to registry.,Login using docker login -u ${{secrets.USER}} -p ${{secrets.PASS}}.
+"Run mvn test <br> Tests run: 20, Failures: 1, Errors: 0, Skipped: 0",Unit Test Assertion Error,One test failed assertion in Maven Surefire.,Fix failing test logic or update expected result.
+"Run npm ci <br> npm ERR! enoent ENOENT: no such file or directory, open 'package-lock.json'",Missing File Error,package-lock.json missing for npm ci.,Replace with npm install or add lock file.
+Run pytest <br> RuntimeError: CUDA out of memory.,GPU Resource Error,Insufficient GPU memory during test.,Reduce batch size or run on CPU.
+Run python script.py <br> SyntaxError: invalid syntax,Syntax Error,Python syntax invalid (missing colon or bracket).,Fix syntax or use linter to check before run.
